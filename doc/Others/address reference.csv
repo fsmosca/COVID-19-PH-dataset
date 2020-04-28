@@ -1,5 +1,5 @@
 DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Province,CityOrMun,City,Municipality,Latitude,Longitude
-"City of Parañaque, NCR","City of Parañaque, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Parañaque City,Parañaque City,,14.4793095,121.0198229
+"City of ParaÃ±aque, NCR","City of ParaÃ±aque, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,ParaÃ±aque City,ParaÃ±aque City,,14.4793095,121.0198229
 "City of Mandaluyong, NCR","City of Mandaluyong, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Mandaluyong City,Mandaluyong City,,14.5794443,121.0359174
 "Quezon City, NCR","Quezon City, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Quezon City,Quezon City,,14.6760413,121.0437003
 "City of Pasig, NCR","City of Pasig, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Pasig City,Pasig City,,14.5763768,121.0851097
@@ -11,7 +11,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "City of Makati, NCR","City of Makati, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Makati City,Makati City,,14.554729,121.0244452
 "City of Manila, NCR","City of Manila, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Manila City,Manila City,,14.5995124,120.9842195
 "Taguig City, NCR","Taguig City, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Taguig City,Taguig City,,14.5176184,121.0508645
-"City of Las Piñas, NCR","City of Las Piñas, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Las Piñas City,Las Piñas City,,14.444546,120.9938736
+"City of Las PiÃ±as, NCR","City of Las PiÃ±as, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Las PiÃ±as City,Las PiÃ±as City,,14.444546,120.9938736
 "Candaba, Pampanga","Candaba, Pampanga, Philippines",Philippines,Luzon,Central Luzon,Pampanga,Pampanga,Candaba,,Candaba,15.1040545,120.8728615
 "Limay, Bataan","Limay, Bataan, Philippines",Philippines,Luzon,Central Luzon,Bataan,Bataan,Limay,,Limay,14.5278776,120.5509358
 "Caloocan City, NCR","Caloocan City, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Caloocan City,Caloocan City,,14.7565784,121.0449768
@@ -30,7 +30,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "City of Valenzuela, NCR","City of Valenzuela, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Valenzuela City,Valenzuela City,,14.7010556,120.9830225
 "City of Santa Rosa, Laguna","City of Santa Rosa, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Santa Rosa City,Santa Rosa City,,14.2843023,121.0888928
 "City of Antipolo (Capital), Rizal","City of Antipolo (Capital), Rizal, Philippines",Philippines,Luzon,Calabarzon,Rizal,Rizal,Antipolo City,Antipolo City,,14.586142,121.169259
-"Los Baños, Laguna","Los Baños, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Los Baños,,Los Baños,14.1699121,121.2440631
+"Los BaÃ±os, Laguna","Los BaÃ±os, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Los BaÃ±os,,Los BaÃ±os,14.1699121,121.2440631
 "Angono, Rizal","Angono, Rizal, Philippines",Philippines,Luzon,Calabarzon,Rizal,Rizal,Angono,,Angono,14.5386796,121.1595008
 "Olongapo City, Zambales","Olongapo City, Zambales, Philippines",Philippines,Luzon,Central Luzon,Zambales,Zambales,Olongapo City,Olongapo City,,14.8386303,120.2842023
 "Guiguinto, Bulacan","Guiguinto, Bulacan, Philippines",Philippines,Luzon,Central Luzon,Bulacan,Bulacan,Guiguinto,,Guiguinto,14.8282987,120.8843023
@@ -39,14 +39,14 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Cagayan De Oro City (Capital), Misamis Oriental","Cagayan De Oro City (Capital), Misamis Oriental, Philippines",Philippines,Mindanao,Northern Mindanao,Misamis Oriental,Misamis Oriental,Cagayan de Oro City,Cagayan de Oro City,,8.4542363,124.6318977
 "Amadeo, Cavite","Amadeo, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Amadeo,,Amadeo,14.1692753,120.9222119
 "Taytay, Rizal","Taytay, Rizal, Philippines",Philippines,Luzon,Calabarzon,Rizal,Rizal,Taytay,,Taytay,14.5585549,121.1360819
-"City of Biñan, Laguna","City of Biñan, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Biñan City,Biñan City,,14.3036345,121.0781493
+"City of BiÃ±an, Laguna","City of BiÃ±an, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,BiÃ±an City,BiÃ±an City,,14.3036345,121.0781493
 "Bacoor City, Cavite","Bacoor City, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Bacoor City,Bacoor City,,14.4129931,120.9736786
 "Legazpi City (Capital), Albay","Legazpi City (Capital), Albay, Philippines",Philippines,Luzon,Bicol,Albay,Albay,Legazpi City,Legazpi City,,13.1390621,123.7437995
 "San Miguel, Bulacan","San Miguel, Bulacan, Philippines",Philippines,Luzon,Central Luzon,Bulacan,Bulacan,San Miguel,,San Miguel,15.166425,121.0105733
 "Teresa, Rizal","Teresa, Rizal, Philippines",Philippines,Luzon,Calabarzon,Rizal,Rizal,Teresa,,Teresa,14.5699776,121.2225713
 "Cavite City, Cavite","Cavite City, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Cavite City,Cavite City,,14.4791297,120.8969634
 "Miagao, Iloilo","Miagao, Iloilo, Philippines",Philippines,Visayas,Western Visayas,Iloilo,Iloilo,Miagao,,Miagao,10.6705468,122.1973081
-"City of Dasmariñas, Cavite","City of Dasmariñas, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Dasmariñas City,Dasmariñas City,,14.2990183,120.9589699
+"City of DasmariÃ±as, Cavite","City of DasmariÃ±as, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,DasmariÃ±as City,DasmariÃ±as City,,14.2990183,120.9589699
 "City of Malabon, NCR","City of Malabon, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Malabon City,Malabon City,,14.6680747,120.9658454
 "Pateros, NCR","Pateros, Metro Manila, Philippines",Philippines,Luzon,NCR,Metro Manila,,Pateros,,Pateros,14.5454321,121.0686773
 "Batangas City (Capital), Batangas","Batangas City (Capital), Batangas, Philippines",Philippines,Luzon,Calabarzon,Batangas,Batangas,Batangas City,Batangas City,,13.765128,121.064226
@@ -212,7 +212,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Alfonso, Cavite","Alfonso, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Alfonso,,Alfonso,14.1214038,120.8613785
 "Jala-Jala, Rizal","Jala-Jala, Rizal, Philippines",Philippines,Luzon,Calabarzon,Rizal,Rizal,Jala-jala,,Jala-jala,14.3408884,121.3427262
 "Daraga (Locsin), Albay","Daraga (Locsin), Albay, Philippines",Philippines,Luzon,Bicol,Albay,Albay,Daraga,,Daraga,13.1028156,123.6958809
-"Mendez (Mendez-Nuñez), Cavite","Mendez (Mendez-Nuñez), Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Mendez (Mendez-Nunez),,Mendez (Mendez-Nunez),14.1311947,120.9015642
+"Mendez (Mendez-NuÃ±ez), Cavite","Mendez (Mendez-NuÃ±ez), Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Mendez (Mendez-Nunez),,Mendez (Mendez-Nunez),14.1311947,120.9015642
 "San Jose, Tarlac","San Jose, Tarlac, Philippines",Philippines,Luzon,Central Luzon,Tarlac,Tarlac,San Jose,,San Jose,15.4200153,120.2974199
 "Nasugbu, Batangas","Nasugbu, Batangas, Philippines",Philippines,Luzon,Calabarzon,Batangas,Batangas,Nasugbu,,Nasugbu,14.0940383,120.6890055
 "Concepcion, Tarlac","Concepcion, Tarlac, Philippines",Philippines,Luzon,Central Luzon,Tarlac,Tarlac,Concepcion,,Concepcion,15.3230428,120.6523622
@@ -297,7 +297,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Matanao, Davao del Sur","Matanao, Davao del Sur, Philippines",Philippines,Mindanao,Davao Region,Davao del Sur,Davao del Sur,Matanao,,Matanao,6.7525856,125.2381713
 "Mambusao, Capiz","Mambusao, Capiz, Philippines",Philippines,Visayas,Western Visayas,Capiz,Capiz,Mambusao,,Mambusao,11.4425704,122.593828
 "Milaor, Camarines Sur","Milaor, Camarines Sur, Philippines",Philippines,Luzon,Bicol,Camarines Sur,Camarines Sur,Milaor,,Milaor,13.5963401,123.1745097
-"Alfonso Castaneda, Nueva Vizcaya","Alfonso Castaneda, Nueva Vizcaya, Philippines",Philippines,Luzon,Cagayan Valley,Nueva Vizcaya,Nueva Vizcaya,Alfonso Castañeda,,Alfonso Castañeda,15.9318902,121.3084088
+"Alfonso Castaneda, Nueva Vizcaya","Alfonso Castaneda, Nueva Vizcaya, Philippines",Philippines,Luzon,Cagayan Valley,Nueva Vizcaya,Nueva Vizcaya,Alfonso CastaÃ±eda,,Alfonso CastaÃ±eda,15.9318902,121.3084088
 "Magalang, Pampanga","Magalang, Pampanga, Philippines",Philippines,Luzon,Central Luzon,Pampanga,Pampanga,Magalang,,Magalang,15.2480028,120.6775054
 "Zaragoza, Nueva Ecija","Zaragoza, Nueva Ecija, Philippines",Philippines,Luzon,Central Luzon,Nueva Ecija,Nueva Ecija,Zaragoza,,Zaragoza,15.4391609,120.792458
 "Rizal, Nueva Ecija","Rizal, Nueva Ecija, Philippines",Philippines,Luzon,Central Luzon,Nueva Ecija,Nueva Ecija,Rizal,,Rizal,15.6935714,121.1022942
