@@ -2,11 +2,20 @@
 A collection of Philippine data for COVID-19 purposes.
 
 ### A. Data
-* [COVID-19 data](https://drive.google.com/drive/folders/10VkiUA8x7TS2jkibhSZK1gmWxFM-EoZP) is shared by [DOH](https://www.doh.gov.ph/) and is updated daily.  
-Minor revision of Case information in csv format can also be found in doc/Department of Health folder in this repo. Revision includes converting the dates into ISO 8601 format that is (YYYY-MM-DD).
-* [PSA](https://psa.gov.ph/classification/psgc/) has standard codes for Philippine geographical data, visit the site for updates and get the full file in excel format.  
-There is a csv file in doc/Philippine Standard Geographic Code in this repo with minor modification such as moving the text strings in population column into the new Notes column. Only numbers are retained in the population column.
-* There is a file "address reference.csv" in doc\Others folder of this repo which contains basic geographic info of people with confirmed cases. Together with "DOH Data Drop Case Information.csv" this file can be used to plot location on the map of confirmed cases for up to city and municipality level.
+#### 1. "DOH Data Drop Case Information.csv"
+Folder: `doc\Department of Health`  
+This file contains confirmed cases based from "DOH COVID Data Drop - 05 Case Information.csv" file.
+More DOH data can be found at this [page](https://drive.google.com/drive/folders/10VkiUA8x7TS2jkibhSZK1gmWxFM-EoZP)  
+DOH address: https://www.doh.gov.ph/
+
+#### 2. "PSGC Publication Dec2019.csv"
+Folder: `doc\Philippine Standard Geographic Code`  
+This file contains location code, name, geographic level [Region, Province, City and others], population and others. You can download the latest data in excel format in PSA (Philippine Statistics Authority) site.  
+PSA address: https://psa.gov.ph/classification/psgc/
+
+#### 3. "address reference.csv"
+Folder: `doc\Others`  
+This file contains basic geographic info of people with confirmed cases. Together with "DOH Data Drop Case Information.csv" this file can be used to plot location on the map of confirmed cases for up to city and municipality level. I will try to update this daily when there is new confirmed cases reports from DOH.
 
 
 ### B. Credits
