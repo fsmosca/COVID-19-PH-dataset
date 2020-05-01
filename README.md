@@ -1,5 +1,5 @@
 # COVID-19 PH dataset
-A collection of Philippine data for COVID-19 purposes.
+A collection of Philippine data for COVID-19 purposes. It also includes python codes to retrieve certain data such confirmed cases and others.
 
 ### A. Data
 #### 1. "DOH COVID Data Drop Case Information.csv"
