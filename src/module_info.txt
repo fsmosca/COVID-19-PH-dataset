@@ -41,26 +41,29 @@ CLASSES
      |  __init__(self, file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv')
      |      Initialize self.  See help(type(self)) for accurate signature.
      |
-     |  cases(self, province=None, days=None)
+     |  cases(self, province=None, days=None, cummulative=False)
      |      :param province: province name
      |      :param days: number of days from latest
+     |      :param cummulative: a total count which includes the previous counts
      |      :return: a list of dict
      |
-     |  deaths(self, province=None, days=None)
+     |  deaths(self, province=None, days=None, cummulative=False)
      |      :param province: province name
      |      :param days: number of days from latest
+     |      :param cummulative: a total count which includes the previous counts
      |      :return: a list of dict
      |
      |  provinces(self)
      |      :return: a list of provinces found in the data file.
      |
-     |  recovered(self, province=None, days=None)
+     |  recoveries(self, province=None, days=None, cummulative=False)
      |      :param province: province name
      |      :param days: number of days from latest
+     |      :param cummulative: a total count which includes the previous counts
      |      :return: a list of dict
      |
      |  unique_date(self)
-     |      :return: a list of unique date objects
+     |      :return: a list of unique date objects in ascending order.
      |
      |  ----------------------------------------------------------------------
      |  Data descriptors defined here:
@@ -72,4 +75,4 @@ CLASSES
      |      list of weak references to the object (if defined)
 
 DATA
-    version = 'covidphi v0.2'
+    version = 'covidphi v0.3'
