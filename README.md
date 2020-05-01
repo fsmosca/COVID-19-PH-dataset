@@ -28,9 +28,9 @@ This file contains basic geographic info such as main island, region, province, 
     d. Navigate to src folder and run/experiment with sample.py.  
     e. You can also place your python script in src folder.  
 
-### C. Python module
-Folder: src  
-Name: covidphi.py
+### C. Python module covidphi.py
+Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)
+
 #### Example 1: Get the Philippine COVID19 daily cases figure in the last 7 days
 ##### Code
 ```python
@@ -120,11 +120,13 @@ Cummulative deaths in Philippines:
 2020-04-12, 296
 ...
 ```
+See sample.py in src folder for other example codes.
 
-See module_info.txt or the module covidphi.py in src folder for other methods of DangerousCovid() class.
+### D. sample.py
+Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)  
+This file contains example codes on how to use the module covidphi.
 
-
-### D. Credits
+### E. Credits
 * Department of Health  
 https://www.doh.gov.ph/
 * Philippine Statistics Authority  
