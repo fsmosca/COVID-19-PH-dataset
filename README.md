@@ -107,20 +107,34 @@ Cummulative deaths in Philippines:
 2020-04-25, 493
 2020-04-24, 476
 2020-04-23, 461
-2020-04-22, 445
-2020-04-21, 436
-2020-04-20, 426
-2020-04-19, 407
-2020-04-18, 396
-2020-04-17, 386
-2020-04-16, 361
-2020-04-15, 348
-2020-04-14, 334
-2020-04-13, 314
-2020-04-12, 296
 ...
 ```
-See sample.py in src folder for other example codes.
+
+#### Example 4: Get patient info with latitude/longitude
+##### Code
+```python
+import covidphi
+
+print(f'Patients info with geo location:')
+info = covidphi.DangerousCovid()
+persons = info.patients(date=True, cityortown=False, province=False, geo=True)
+for p in persons:
+    print(p)
+```
+##### Output
+```
+Patients info with geo location:
+{'Patient': 'C404174', 'Date': '2020-01-30', 'Latitude': 9.3129297, 'Longitude': 123.3021299}
+{'Patient': 'C462688', 'Date': '2020-02-03', 'Latitude': 9.3129297, 'Longitude': 123.3021299}
+{'Patient': 'C387710', 'Date': '2020-02-05', 'Latitude': 9.573142899999999, 'Longitude': 123.7629465}
+{'Patient': 'C377460', 'Date': '2020-03-06', 'Latitude': 14.5176184, 'Longitude': 121.0508645}
+{'Patient': 'C498051', 'Date': '2020-03-06', 'Latitude': 14.5864844, 'Longitude': 121.114876}
+{'Patient': 'C130591', 'Date': '2020-03-07', 'Latitude': 14.5864844, 'Longitude': 121.114876}
+{'Patient': 'C178743', 'Date': '2020-03-08', 'Latitude': 14.554729, 'Longitude': 121.0244452}
+...
+```
+
+See sample.py in src folder for more examples.
 
 ### D. sample.py
 Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)  
