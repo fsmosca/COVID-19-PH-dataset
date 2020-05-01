@@ -27,7 +27,7 @@ def main():
             
     # (3) Recovered
     print('Recoveries in the last 7 days:')
-    recovered = covid.recovered(days=7)
+    recovered = covid.recoveries(days=7)
     for r in recovered:
         print(f'{r["Date"]}, {r["Count"]}')
 
@@ -37,19 +37,43 @@ def main():
         print(p)
 
     # (5) Print confirmed cases in Bulacan in the last 30 days.
-    days = 30
-    prov = 'Bulacan'
-    print(f'Confirmed cases at {prov} in the last {days} days:')
+    days, prov = 30, 'Bulacan'
+    print(f'Confirmed cases in {prov} in the last {days} days:')
     cc = covid.cases(province=prov, days=days)
     for c in cc:
         print(f'{c["Date"]}, {c["Province"]}, {c["Count"]}')
 
     # (6) Print confirmed cases in NCR for all days with records.
     days, place = 14, 'NCR'
-    print(f'Confirmed cases at {place} for all days with records:')
+    print(f'Confirmed cases in {place}:')
     cc = covid.cases(province=place, days=None)
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
+
+    # (7) Print cummulative confirmed cases in Bulacan.
+    prov = 'Bulacan'
+    print(f'Cummulative confirmed cases in {prov}:')
+    cc = covid.cases(province=prov, days=None, cummulative=True)
+    for c in cc:
+        print(f'{c["Date"]}, {c["Count"]}')
+
+    # (8) Print cummulative confirmed cases in Philippines.
+    print(f'Cummulative confirmed cases in Philippines')
+    cc = covid.cases(province=None, days=None, cummulative=True)
+    for c in cc:
+        print(f'{c["Date"]}, {c["Count"]}')
+
+    # (9) Cummulative recoveries in NCR in the last 14 days
+    print('Cummulative recoveries in NCR in the last 14 days:')
+    recovered = covid.recoveries(province='NCR', days=14, cummulative=True)
+    for r in recovered:
+        print(f'{r["Date"]}, {r["Count"]}')
+
+    # (10) Cummulative deaths in NCR
+    print('Cummulative deaths in NCR:')
+    death = covid.deaths(province='NCR', days=None, cummulative=True)
+    for d in death:
+        print(f'{d["Date"]}, {d["Count"]}')
 
 
 if __name__ == '__main__':
