@@ -19,14 +19,14 @@ This file contains basic geographic info such as main island, region, province, 
 
 ### B. How to use this repository
 ##### 1. Download and install Python
-    You may download python at https://www.python.org/downloads/
+    You may download python at https://www.python.org/downloads/. Latest version like 3.8.2 is better.
 
 ##### 2. Download this repo
     a. Press the button "Clone or Download" located at the top right of this page.  
     b. Select DOWNLOAD ZIP.  
     c. Uncompressed it on your computer.  
-    d. Navigate to src folder.  
-    e. You can place your python script in this src folder.  
+    d. Navigate to src folder and run/experiment with sample.py.  
+    e. You can also place your python script in src folder.  
 
 ### C. Python module
 Folder: src  
