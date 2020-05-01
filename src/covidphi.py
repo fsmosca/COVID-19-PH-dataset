@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.3'
+version = 'covidphi v0.4'
 
 
 class DangerousCovid:    
@@ -209,5 +209,31 @@ class DangerousCovid:
                 if i >= days - 1:
                     break
             return ret2
+
+        return ret
+
+    def patients(self, date=True, cityortown=False, province=False):
+        """
+        :param date: if true, the date publicly announced as confirmed case will be extracted
+        :param cityortown: if true, the city or municipality of patient will be extracted
+        :param province: if true, the province of patient will be extraced
+        :return: a list of dict [{'Patient': code, 'date: yyy-mm-dd ...}, {}, ...]
+        """
+        ret = []
+        for doh in self.__data:
+            info = {}
+            info.update({'Patient': doh['CaseCode']})
+            if date:
+                date_dt = datetime.strptime(doh['DateRepConf'], '%Y-%m-%d').date()
+                info.update({'Date': str(date_dt)})
+            if cityortown:
+                info.update({'CityOrTown': doh['CityMunRes']})
+            if province:
+                info.update({'Province': doh['ProvRes']})
+            ret.append(info)
+
+        # Sort by date in ascending order
+        if date:
+            ret = sorted(ret, key=lambda i: i['Date'], reverse=False)
 
         return ret
