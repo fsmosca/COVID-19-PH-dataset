@@ -17,8 +17,34 @@ PSA address: https://psa.gov.ph/classification/psgc/
 Folder: [doc\Others](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/doc/Others)  
 This file contains basic geographic info such as main island, region, province, city, municipality, latitude/longitude of people with confirmed cases. The region, province, city, municipality and latitude/longitude data are mostly taken from [Google Maps Platform](https://cloud.google.com/maps-platform/?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_269762947808-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+%5BMV%5D+%7C+PH+%7C+EN+%7C+BK+%7C+EXA+%7C+Google+Maps+Geo-KWID_43700030642350879-kwd-300650646186-userloc_1011154&utm_term=KW_google%20geocoding%20api-ST_google+geocoding+api&gclid=EAIaIQobChMI68rZqLeM6QIVt8EWBR24sw4KEAAYASAAEgJIavD_BwE) specifically the Geocoding API. Together with "DOH COVID Data Drop Case Information.csv" this file can be used to plot location on the map of confirmed cases for up to city and municipality level. I will try to update this daily when there is new confirmed cases reports from DOH.
 
+### B. Python module
+Folder: src  
+Name: covidphi.py
+##### Get the Philippine COVID19 daily cases figure in the last 7 days
+```python
+import covidphi
 
-### B. Credits
+daily_info = covidphi.DangerousCovid()
+cases = daily_info.cases(days=7)
+print('Confirmed cases in the last 7 days:')
+for c in cases:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+##### Output
+```
+Confirmed cases in the last 7 days:
+2020-04-30, 276
+2020-04-29, 254
+2020-04-28, 181
+2020-04-27, 198
+2020-04-26, 285
+2020-04-25, 102
+2020-04-24, 211
+```
+See module_info.txt for other methods of DangerousCovid() class.
+
+
+### C. Credits
 * Department of Health  
 https://www.doh.gov.ph/
 * Philippine Statistics Authority  
