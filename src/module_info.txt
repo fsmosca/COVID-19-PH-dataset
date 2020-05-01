@@ -54,10 +54,6 @@ CLASSES
      |  provinces(self)
      |      :return: a list of provinces found in the data file.
      |
-     |  read_csv(self, encode='utf-8')
-     |      :param encode:
-     |      :return: Save contains of csv file as a list of dict.
-     |
      |  recovered(self, province=None, days=None)
      |      :param province: province name
      |      :param days: number of days from latest
@@ -76,4 +72,4 @@ CLASSES
      |      list of weak references to the object (if defined)
 
 DATA
-    version = 'covidphi v0.1'
+    version = 'covidphi v0.2'
