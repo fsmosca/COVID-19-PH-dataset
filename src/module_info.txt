@@ -1,0 +1,79 @@
+NAME
+    covidphi
+
+DESCRIPTION
+    Filename:
+        covidphi.py
+
+    Description:
+        A module that can be used to return specific Philippine COVID info. The info
+        are based from DOH (Department of Health) at https://www.doh.gov.ph/.
+
+    Database source:
+        DOH:
+            https://drive.google.com/drive/folders/10VkiUA8x7TS2jkibhSZK1gmWxFM-EoZP
+        On this Repository:
+            "doc/Department of Health/DOH COVID Data Drop Case Information.csv"
+
+    Example:
+        Print a list of dict in the last 7 days confirmed cases in PHI.
+
+    import covidphi
+
+    covid = covidphi.DangerousCovid()
+    cases = covid.cases(days=7)
+    print(cases)
+    print('Confirmed cases in the last 7 days:')
+    for c in cases:
+        print(f'{c["Date"]}, {c["Count"]}')
+
+    See sample.py for more examples.
+
+CLASSES
+    builtins.object
+        DangerousCovid
+
+    class DangerousCovid(builtins.object)
+     |  DangerousCovid(file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv')
+     |
+     |  Methods defined here:
+     |
+     |  __init__(self, file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv')
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |
+     |  cases(self, province=None, days=None)
+     |      :param province: province name
+     |      :param days: number of days from latest
+     |      :return: a list of dict
+     |
+     |  deaths(self, province=None, days=None)
+     |      :param province: province name
+     |      :param days: number of days from latest
+     |      :return: a list of dict
+     |
+     |  provinces(self)
+     |      :return: a list of provinces found in the data file.
+     |
+     |  read_csv(self, encode='utf-8')
+     |      :param encode:
+     |      :return: Save contains of csv file as a list of dict.
+     |
+     |  recovered(self, province=None, days=None)
+     |      :param province: province name
+     |      :param days: number of days from latest
+     |      :return: a list of dict
+     |
+     |  unique_date(self)
+     |      :return: a list of unique date objects
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+DATA
+    version = 'covidphi v0.1'
