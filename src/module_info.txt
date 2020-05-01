@@ -34,11 +34,11 @@ CLASSES
         DangerousCovid
 
     class DangerousCovid(builtins.object)
-     |  DangerousCovid(file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv')
+     |  DangerousCovid(doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv')
      |
      |  Methods defined here:
      |
-     |  __init__(self, file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv')
+     |  __init__(self, doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv')
      |      Initialize self.  See help(type(self)) for accurate signature.
      |
      |  cases(self, province=None, days=None, cummulative=False)
@@ -52,6 +52,15 @@ CLASSES
      |      :param days: number of days from latest
      |      :param cummulative: a total count which includes the previous counts
      |      :return: a list of dict
+     |
+     |  patients(self, date=True, cityortown=False, province=False, geo=False)
+     |      Returns patient info including address and geo data i.e latitude/longitude.
+     |
+     |      :param date: if true, the date publicly announced as confirmed case will be extracted
+     |      :param cityortown: if true, the city or municipality of patient will be extracted
+     |      :param province: if true, the province of patient will be extracted
+     |      :param geo: if true, the latitude and longitude of patient will be extracted
+     |      :return: a list of dict [{'Patient': code, 'date: yyy-mm-dd ...}, {}, ...]
      |
      |  provinces(self)
      |      :return: a list of provinces found in the data file.
@@ -75,4 +84,4 @@ CLASSES
      |      list of weak references to the object (if defined)
 
 DATA
-    version = 'covidphi v0.3'
+    version = 'covidphi v0.5'
