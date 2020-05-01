@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.2'
+version = 'covidphi v0.3'
 
 
 class DangerousCovid:    
@@ -54,7 +54,7 @@ class DangerousCovid:
 
     def unique_date(self):
         """
-        :return: a list of unique date objects
+        :return: a list of unique date objects in ascending order.
         """
         ret = []
         for d in self.__data:
@@ -62,7 +62,7 @@ class DangerousCovid:
             date = datetime.strptime(date_conf, '%Y-%m-%d').date()
             ret.append(date)
 
-        return sorted(list(set(ret)), reverse=True)
+        return sorted(list(set(ret)), reverse=False)
     
     def provinces(self):
         """
@@ -76,13 +76,15 @@ class DangerousCovid:
             ret.append(prov)
         return sorted(list(set(ret)))
         
-    def cases(self, province=None, days=None):
+    def cases(self, province=None, days=None, cummulative=False):
         """
         :param province: province name
         :param days: number of days from latest
+        :param cummulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
+        running_sum = 0
 
         if province is not None:
             if province.lower() not in [p.lower() for p in self.provinces()]:
@@ -100,26 +102,33 @@ class DangerousCovid:
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
+            running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': cnt})            
+            res.update({'Count': running_sum if cummulative else cnt})
             ret.append(res)
 
-            if days is None:
-                continue
+        ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
 
-            if i >= days - 1:
-                break
+        if days is not None:
+            ret2 = []
+            for i, n in enumerate(ret):
+                ret2.append(n)
+                if i >= days - 1:
+                    break
+            return ret2
 
         return ret
     
-    def deaths(self, province=None, days=None):
+    def deaths(self, province=None, days=None, cummulative=False):
         """
         :param province: province name
         :param days: number of days from latest
+        :param cummulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
+        running_sum = 0
 
         if province is not None:
             if province.lower() not in [p.lower() for p in self.provinces()]:
@@ -139,26 +148,33 @@ class DangerousCovid:
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
+            running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': cnt})
+            res.update({'Count': running_sum if cummulative else cnt})
             ret.append(res)
 
-            if days is None:
-                continue
+        ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
 
-            if i >= days - 1:
-                break
+        if days is not None:
+            ret2 = []
+            for i, n in enumerate(ret):
+                ret2.append(n)
+                if i >= days - 1:
+                    break
+            return ret2
 
         return ret
     
-    def recovered(self, province=None, days=None):
+    def recoveries(self, province=None, days=None, cummulative=False):
         """
         :param province: province name
         :param days: number of days from latest
+        :param cummulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
+        running_sum = 0
 
         if province is not None:
             if province.lower() not in [p.lower() for p in self.provinces()]:
@@ -178,15 +194,20 @@ class DangerousCovid:
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
+            running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': cnt})
+            res.update({'Count': running_sum if cummulative else cnt})
             ret.append(res)
 
-            if days is None:
-                continue
+        ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
 
-            if i >= days - 1:
-                break
+        if days is not None:
+            ret2 = []
+            for i, n in enumerate(ret):
+                ret2.append(n)
+                if i >= days - 1:
+                    break
+            return ret2
 
         return ret
