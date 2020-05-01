@@ -32,32 +32,32 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.1'
+version = 'covidphi v0.2'
 
 
 class DangerousCovid:    
     def __init__(self, file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv'):
-        self.file = file
-        self.data = []
+        self.__file = file
+        self.__data = []
 
-        self.read_csv('utf-8')
+        self.__read_csv('utf-8')
 
-    def read_csv(self, encode='utf-8'):
+    def __read_csv(self, encode='utf-8'):
         """
         :param encode:
         :return: Save contains of csv file as a list of dict.
         """
-        with open(self.file, encoding=encode) as csv_file:
+        with open(self.__file, encoding=encode) as csv_file:
             csv_reader = csv.DictReader(csv_file)
             for row in csv_reader:
-                self.data.append(row)
+                self.__data.append(row)
 
     def unique_date(self):
         """
         :return: a list of unique date objects
         """
         ret = []
-        for d in self.data:
+        for d in self.__data:
             date_conf = d['DateRepConf']
             date = datetime.strptime(date_conf, '%Y-%m-%d').date()
             ret.append(date)
@@ -69,7 +69,7 @@ class DangerousCovid:
         :return: a list of provinces found in the data file.
         """
         ret = []
-        for doh in self.data:
+        for doh in self.__data:
             prov = doh['ProvRes']
             if prov == '':
                 continue
@@ -93,7 +93,7 @@ class DangerousCovid:
 
         for i, ud in enumerate(u_date):
             res, cnt = {}, 0
-            for doh in self.data:
+            for doh in self.__data:
                 date_conf = doh['DateRepConf']
                 date_dt = datetime.strptime(date_conf, '%Y-%m-%d').date()
                 if (ud == date_dt and
@@ -130,7 +130,7 @@ class DangerousCovid:
 
         for i, ud in enumerate(u_date):
             res, cnt = {}, 0
-            for doh in self.data:
+            for doh in self.__data:
                 if doh['RemovalType'] != 'Died':
                     continue
                 date_rem = doh['DateRepRem']
@@ -169,7 +169,7 @@ class DangerousCovid:
 
         for i, ud in enumerate(u_date):
             res, cnt = {}, 0
-            for doh in self.data:
+            for doh in self.__data:
                 if doh['RemovalType'] != 'Recovered':
                     continue
                 date_rem = doh['DateRepRem']
