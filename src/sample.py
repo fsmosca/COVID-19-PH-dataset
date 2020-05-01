@@ -81,7 +81,13 @@ def main():
     for p in person:
         print(p)
         # {'Patient': 'C109005', 'Date': '2020-04-30', 'CityOrTown': 'Caluya', 'Province': 'Antique'}
-        # {'Patient': 'C207558', 'Date': '2020-04-30', 'CityOrTown': 'City of Manila', 'Province': 'NCR'}
+
+    # (12) Print a list of patient case code, date confirmed and geo lat/lon
+    print('Patients case code with confirmation date, and latitude/longitude:')
+    persons = covid.patients(date=True, cityortown=False, province=False, geo=True)
+    for p in persons:
+        print(p)
+        # {'Patient': 'C630867', 'Date': '2020-04-17', 'Latitude': 14.6760413, 'Longitude': 121.0437003}
 
 
 if __name__ == '__main__':
