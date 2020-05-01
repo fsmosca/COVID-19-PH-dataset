@@ -53,7 +53,39 @@ Confirmed cases in the last 7 days:
 2020-04-25, 102
 2020-04-24, 211
 ```
-See module_info.txt in src folder for other methods of DangerousCovid() class.
+
+#### Example 2: Get cases in Bulacan province in the last 14 days
+##### Code
+```python
+import covidphi
+
+days, prov = 14, 'Bulacan'
+print(f'Confirmed cases at {prov} in the last {days} days:')
+daily_info = covidphi.DangerousCovid()
+cc = daily_info.cases(province=prov, days=days)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+##### Output
+```
+Confirmed cases at Bulacan in the last 14 days:
+2020-04-30, 1
+2020-04-29, 1
+2020-04-28, 1
+2020-04-27, 3
+2020-04-26, 3
+2020-04-25, 0
+2020-04-24, 1
+2020-04-23, 2
+2020-04-22, 2
+2020-04-21, 0
+2020-04-20, 2
+2020-04-19, 1
+2020-04-18, 2
+2020-04-17, 3
+```
+
+See module_info.txt or the module covidphi.py in src folder for other methods of DangerousCovid() class.
 
 
 ### D. Credits
