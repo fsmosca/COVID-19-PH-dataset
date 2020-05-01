@@ -32,25 +32,30 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.4'
+version = 'covidphi v0.5'
 
 
 class DangerousCovid:    
-    def __init__(self, file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv'):
-        self.__file = file
-        self.__data = []
+    def __init__(self,
+                 doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv',
+                 address_file='../doc/Others/address reference.csv'):
+        self.__address_file = address_file
+        self.__data = DangerousCovid.__read_csv(doh_file, 'utf-8')
 
-        self.__read_csv('utf-8')
-
-    def __read_csv(self, encode='utf-8'):
+    @staticmethod
+    def __read_csv(csvfile, encode='utf-8'):
         """
-        :param encode:
-        :return: Save contains of csv file as a list of dict.
+        :param csvfile: the filename of file
+        :param encode: encoding
+        :return: a list of dict
         """
-        with open(self.__file, encoding=encode) as csv_file:
+        ret = []
+        with open(csvfile, encoding=encode) as csv_file:
             csv_reader = csv.DictReader(csv_file)
             for row in csv_reader:
-                self.__data.append(row)
+                ret.append(row)
+
+        return ret
 
     def unique_date(self):
         """
@@ -212,14 +217,22 @@ class DangerousCovid:
 
         return ret
 
-    def patients(self, date=True, cityortown=False, province=False):
+    def patients(self, date=True, cityortown=False, province=False, geo=False):
         """
+        Returns patient info including address and geo data i.e latitude/longitude.
+
         :param date: if true, the date publicly announced as confirmed case will be extracted
         :param cityortown: if true, the city or municipality of patient will be extracted
-        :param province: if true, the province of patient will be extraced
+        :param province: if true, the province of patient will be extracted
+        :param geo: if true, the latitude and longitude of patient will be extracted
         :return: a list of dict [{'Patient': code, 'date: yyy-mm-dd ...}, {}, ...]
         """
         ret = []
+
+        # Read the "address reference.csv" file if geo is true.
+        if geo:
+            geo_data = DangerousCovid.__read_csv(self.__address_file, 'utf-8')
+
         for doh in self.__data:
             info = {}
             info.update({'Patient': doh['CaseCode']})
@@ -230,6 +243,19 @@ class DangerousCovid:
                 info.update({'CityOrTown': doh['CityMunRes']})
             if province:
                 info.update({'Province': doh['ProvRes']})
+            if geo:
+                address_lookup = f'{doh["CityMunRes"]}, {doh["ProvRes"]}'
+                found = False
+                for g in geo_data:
+                    address = g['DOHCityMunProvRes']
+                    if address == address_lookup:
+                        info.update({'Latitude': float(g['Latitude'])})
+                        info.update({'Longitude': float(g['Longitude'])})
+                        found = True
+                        break
+                if not found:
+                    info.update({'Latitude': None})
+                    info.update({'Longitude': None})
             ret.append(info)
 
         # Sort by date in ascending order
