@@ -75,6 +75,14 @@ def main():
     for d in death:
         print(f'{d["Date"]}, {d["Count"]}')
 
+    # (11) Print a list of patient case code and date confirmed, with city/town, province
+    print('Patients case code with confirmation date, and address:')
+    person = covid.patients(date=True, cityortown=True, province=True)
+    for p in person:
+        print(p)
+        # {'Patient': 'C109005', 'Date': '2020-04-30', 'CityOrTown': 'Caluya', 'Province': 'Antique'}
+        # {'Patient': 'C207558', 'Date': '2020-04-30', 'CityOrTown': 'City of Manila', 'Province': 'NCR'}
+
 
 if __name__ == '__main__':
     main()
