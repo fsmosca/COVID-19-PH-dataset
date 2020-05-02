@@ -50,28 +50,28 @@ def main():
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
 
-    # (7) Print cummulative confirmed cases in Bulacan.
+    # (7) Print Cumulative confirmed cases in Bulacan.
     prov = 'Bulacan'
-    print(f'Cummulative confirmed cases in {prov}:')
-    cc = covid.cases(province=prov, days=None, cummulative=True)
+    print(f'Cumulative confirmed cases in {prov}:')
+    cc = covid.cases(province=prov, days=None, cumulative=True)
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
 
-    # (8) Print cummulative confirmed cases in Philippines.
-    print(f'Cummulative confirmed cases in Philippines')
-    cc = covid.cases(province=None, days=None, cummulative=True)
+    # (8) Print Cumulative confirmed cases in Philippines.
+    print(f'Cumulative confirmed cases in Philippines')
+    cc = covid.cases(province=None, days=None, cumulative=True)
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
 
-    # (9) Cummulative recoveries in NCR in the last 14 days
-    print('Cummulative recoveries in NCR in the last 14 days:')
-    recovered = covid.recoveries(province='NCR', days=14, cummulative=True)
+    # (9) Cumulative recoveries in NCR in the last 14 days
+    print('Cumulative recoveries in NCR in the last 14 days:')
+    recovered = covid.recoveries(province='NCR', days=14, cumulative=True)
     for r in recovered:
         print(f'{r["Date"]}, {r["Count"]}')
 
-    # (10) Cummulative deaths in NCR
-    print('Cummulative deaths in NCR:')
-    death = covid.deaths(province='NCR', days=None, cummulative=True)
+    # (10) Cumulative deaths in NCR
+    print('Cumulative deaths in NCR:')
+    death = covid.deaths(province='NCR', days=None, cumulative=True)
     for d in death:
         print(f'{d["Date"]}, {d["Count"]}')
 
