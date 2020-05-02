@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.6'
+version = 'covidphi v0.7'
 
 
 class DangerousCovid:    
@@ -57,14 +57,19 @@ class DangerousCovid:
 
         return ret
 
-    def unique_date(self):
+    def unique_date(self, header='DateRepConf'):
         """
-        :return: a list of unique date objects in ascending order.
+        When calculating confirmed cases, use the DateRepConf column. For
+        recoveries use the DateRepRem. For deaths use DateRepRem too.
+
+        :header: name of column with dates to use, default is confirmed date
+        :return: a list of unique string date ordered in ascending order
         """
         ret = []
         for d in self.__data:
-            date_conf = d['DateRepConf']
-            date = datetime.strptime(date_conf, '%Y-%m-%d').date()
+            date = d[header]
+            if date == '':
+                continue
             ret.append(date)
 
         return sorted(list(set(ret)), reverse=False)
@@ -102,13 +107,12 @@ class DangerousCovid:
             res, cnt = {}, 0
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
-                date_dt = datetime.strptime(date_conf, '%Y-%m-%d').date()
-                if (ud == date_dt and
+                if (ud == date_conf and
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
             running_sum += cnt
-            res.update({'Date': str(ud)})
+            res.update({'Date': ud})
             res.update({'Province': 'All provinces' if province is None else province})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
@@ -140,7 +144,7 @@ class DangerousCovid:
                 print(f'Province {province} is not found in database.')
                 return ret
 
-        u_date = self.unique_date()
+        u_date = self.unique_date(header='DateRepRem')
 
         for i, ud in enumerate(u_date):
             res, cnt = {}, 0
@@ -148,13 +152,12 @@ class DangerousCovid:
                 if doh['RemovalType'] != 'Died':
                     continue
                 date_rem = doh['DateRepRem']
-                date_dt = datetime.strptime(date_rem, '%Y-%m-%d').date()
-                if (ud == date_dt and
+                if (ud == date_rem and
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
             running_sum += cnt
-            res.update({'Date': str(ud)})
+            res.update({'Date': ud})
             res.update({'Province': 'All provinces' if province is None else province})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
@@ -186,7 +189,7 @@ class DangerousCovid:
                 print(f'Province {province} is not found in database.')
                 return ret
 
-        u_date = self.unique_date()
+        u_date = self.unique_date(header='DateRepRem')
 
         for i, ud in enumerate(u_date):
             res, cnt = {}, 0
@@ -194,13 +197,12 @@ class DangerousCovid:
                 if doh['RemovalType'] != 'Recovered':
                     continue
                 date_rem = doh['DateRepRem']
-                date_dt = datetime.strptime(date_rem, '%Y-%m-%d').date()
-                if (ud == date_dt and
+                if (ud == date_rem and
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
                     cnt += 1
             running_sum += cnt
-            res.update({'Date': str(ud)})
+            res.update({'Date': ud})
             res.update({'Province': 'All provinces' if province is None else province})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
