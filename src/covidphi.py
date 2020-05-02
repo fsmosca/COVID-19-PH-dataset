@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.5'
+version = 'covidphi v0.6'
 
 
 class DangerousCovid:    
@@ -81,11 +81,11 @@ class DangerousCovid:
             ret.append(prov)
         return sorted(list(set(ret)))
         
-    def cases(self, province=None, days=None, cummulative=False):
+    def cases(self, province=None, days=None, cumulative=False):
         """
         :param province: province name
         :param days: number of days from latest
-        :param cummulative: a total count which includes the previous counts
+        :param cumulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
@@ -110,7 +110,7 @@ class DangerousCovid:
             running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': running_sum if cummulative else cnt})
+            res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
         ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
@@ -125,11 +125,11 @@ class DangerousCovid:
 
         return ret
     
-    def deaths(self, province=None, days=None, cummulative=False):
+    def deaths(self, province=None, days=None, cumulative=False):
         """
         :param province: province name
         :param days: number of days from latest
-        :param cummulative: a total count which includes the previous counts
+        :param cumulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
@@ -156,7 +156,7 @@ class DangerousCovid:
             running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': running_sum if cummulative else cnt})
+            res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
         ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
@@ -171,11 +171,11 @@ class DangerousCovid:
 
         return ret
     
-    def recoveries(self, province=None, days=None, cummulative=False):
+    def recoveries(self, province=None, days=None, cumulative=False):
         """
         :param province: province name
         :param days: number of days from latest
-        :param cummulative: a total count which includes the previous counts
+        :param cumulative: a total count which includes the previous counts
         :return: a list of dict
         """
         ret = []
@@ -202,7 +202,7 @@ class DangerousCovid:
             running_sum += cnt
             res.update({'Date': str(ud)})
             res.update({'Province': 'All provinces' if province is None else province})
-            res.update({'Count': running_sum if cummulative else cnt})
+            res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
         ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
