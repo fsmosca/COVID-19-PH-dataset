@@ -89,6 +89,12 @@ def main():
         print(p)
         # {'Patient': 'C630867', 'Date': '2020-04-17', 'Latitude': 14.6760413, 'Longitude': 121.0437003}
 
+    # (13) Print Cumulative active confirmed cases in Philippines.
+    print(f'Cumulative active confirmed cases in Philippines:')
+    cc = covid.cases(province=None, days=None, cumulative=True, active=True)
+    for c in cc:
+        print(f'{c["Date"]}, {c["Count"]}')
+
 
 if __name__ == '__main__':
     main()
