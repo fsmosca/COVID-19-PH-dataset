@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.7'
+version = 'covidphi v0.8'
 
 
 class DangerousCovid:    
@@ -86,11 +86,15 @@ class DangerousCovid:
             ret.append(prov)
         return sorted(list(set(ret)))
         
-    def cases(self, province=None, days=None, cumulative=False):
+    def cases(self, province=None, days=None, cumulative=False, active=False):
         """
+        Returns a list of dict for confirmed cases. It can be filtered by
+        province, last days, cumulative and whether or not it is active.
+
         :param province: province name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
+        :param active: if true it will extract all cases except deaths and recoveries
         :return: a list of dict
         """
         ret = []
@@ -107,10 +111,19 @@ class DangerousCovid:
             res, cnt = {}, 0
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
+
+                # Filter date, province and active cases
                 if (ud == date_conf and
                         (province is None or
                          province.lower() == doh['ProvRes'].lower())):
-                    cnt += 1
+
+                    # Active cases excludes deaths and recoveries
+                    if not active:
+                        cnt += 1
+                    else:
+                        if doh['RemovalType'] not in ['Died', 'Recovered']:
+                            cnt += 1
+
             running_sum += cnt
             res.update({'Date': ud})
             res.update({'Province': 'All provinces' if province is None else province})
