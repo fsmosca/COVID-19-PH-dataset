@@ -31,7 +31,7 @@ This file contains basic geographic info such as main island, region, province, 
 ### C. Python module covidphi.py
 Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)
 
-#### Example 1: Get the Philippine COVID19 daily cases figure in the last 7 days
+#### Example 1: Get the Philippine COVID19 daily confirmed cases in the last 7 days
 ##### Code
 ```python
 import covidphi
@@ -45,13 +45,13 @@ for c in cases:
 ##### Output
 ```
 Confirmed cases in the last 7 days:
+2020-05-02, 156
+2020-05-01, 284
 2020-04-30, 276
 2020-04-29, 254
 2020-04-28, 181
 2020-04-27, 198
 2020-04-26, 285
-2020-04-25, 102
-2020-04-24, 211
 ```
 
 #### Example 2: Get cases in Bulacan province in the last 14 days
@@ -132,6 +132,75 @@ Patients info with geo location:
 {'Patient': 'C130591', 'Date': '2020-03-07', 'Latitude': 14.5864844, 'Longitude': 121.114876}
 {'Patient': 'C178743', 'Date': '2020-03-08', 'Latitude': 14.554729, 'Longitude': 121.0244452}
 ...
+```
+
+#### Example 5: Get cumulative all confirmed cases in Philippines
+##### Code
+```python
+print(f'Cumulative all confirmed cases in Philippines')
+cc = covid.cases(province=None, days=None, cumulative=True)  # a list of dictionary
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+
+##### Output
+```
+Cumulative confirmed cases in Philippines
+2020-05-02, 8928
+2020-05-01, 8772
+2020-04-30, 8488
+2020-04-29, 8212
+2020-04-28, 7958
+2020-04-27, 7777
+2020-04-26, 7579
+...
+```
+
+#### Example 6: Cumulative active confirmed cases in Philippines
+##### Code
+```python
+print(f'Cumulative active confirmed cases in Philippines:')
+print('Active means excluding deaths and recoveries.')
+cc = covid.cases(province=None, days=None, cumulative=True, active=True)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+
+##### Output
+```
+Cumulative active confirmed cases in Philippines:
+Active means excluding deaths and recoveries.
+2020-05-02, 7201
+2020-05-01, 7045
+2020-04-30, 6765
+2020-04-29, 6490
+2020-04-28, 6237
+2020-04-27, 6061
+2020-04-26, 5871
+...
+```
+
+#### Example 7: Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days
+##### Code
+```python
+print(f'Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:')
+print('Active means excluding deaths and recoveries.')
+cc = covid.cases(province='NCR', days=7, cumulative=True, active=True)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+
+##### Output
+```
+Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:
+Active means excluding deaths and recoveries.
+2020-05-02, 3878
+2020-05-01, 3843
+2020-04-30, 3763
+2020-04-29, 3741
+2020-04-28, 3628
+2020-04-27, 3572
+2020-04-26, 3516
 ```
 
 See sample.py in src folder for more examples.
