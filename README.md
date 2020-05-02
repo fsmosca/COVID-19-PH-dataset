@@ -85,20 +85,20 @@ Confirmed cases at Bulacan in the last 14 days:
 2020-04-17, 3
 ```
 
-#### Example 3: Cummulative deaths in Philippines
+#### Example 3: Cumulative deaths in Philippines
 ##### Code
 ```python
 import covidphi
 
-print('Cummulative deaths in Philippines:')
+print('Cumulative deaths in Philippines:')
 info = covidphi.DangerousCovid()
-death = info.deaths(province=None, days=None, cummulative=True)
+death = info.deaths(province=None, days=None, cumulative=True)
 for d in death:
     print(f'{d["Date"]}, {d["Count"]}')
 ```
 ##### Output
 ```
-Cummulative deaths in Philippines:
+Cumulative deaths in Philippines:
 2020-04-30, 567
 2020-04-29, 557
 2020-04-28, 529
