@@ -24349,7 +24349,7 @@ Code,Name,Geographic Level,City Class,Income Classification,Urban / Rural(based 
 72225012,Poblacion,Bgy,,,R,"3,130",,,
 72225013,Salamanca,Bgy,,,R,660,,,
 72225014,San Roque,Bgy,,,R,"1,556",,,
-72226000,CITY OF LAPU-LAPU (OPON),City,HUC,1st,,"408,112",,,
+72226000,CITY OF LAPU-LAPU,City,HUC,1st,,"408,112",,,OPON
 72226001,Agus,Bgy,,,U,"15,767",,,
 72226002,Babag,Bgy,,,U,"22,756",,,
 72226003,Bankal,Bgy,,,U,"20,872",,,
@@ -25056,7 +25056,7 @@ Code,Name,Geographic Level,City Class,Income Classification,Urban / Rural(based 
 74605008,Nagbo-alao,Bgy,,,R,"4,884",,,
 74605009,Olandao,Bgy,,,R,"1,085",,,
 74605010,Poblacion,Bgy,,,U,"4,719",,,
-74606000,CITY OF BAYAWAN (TULONG),City,CC,2nd,,"117,900",,,
+74606000,CITY OF BAYAWAN,City,CC,2nd,,"117,900",,,TULONG
 74606001,Ali-is,Bgy,,,R,"2,771",,,
 74606002,Banaybanay,Bgy,,,R,"4,258",,,
 74606003,Banga,Bgy,,,U,"6,877",,,
@@ -36121,7 +36121,7 @@ Code,Name,Geographic Level,City Class,Income Classification,Urban / Rural(based 
 126302021,San Jose (Barrio 7),Bgy,,,R,"4,077",,,
 126302022,San Vicente (Barrio 6),Bgy,,,U,"6,092",,,
 126302024,Yangco Poblacion,Bgy,,,R,"1,508",,,
-126303000,CITY OF GENERAL SANTOS (DADIANGAS),City,HUC,1st,,"594,446",,,
+126303000,CITY OF GENERAL SANTOS,City,HUC,1st,,"594,446",,,DADIANGAS
 126303003,Baluan,Bgy,,,U,"7,611",,,
 126303004,Buayan,Bgy,,,U,"11,196",,,
 126303005,Bula,Bgy,,,U,"31,363",,,
