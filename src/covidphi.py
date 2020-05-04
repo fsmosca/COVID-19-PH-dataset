@@ -73,6 +73,22 @@ class DangerousCovid:
             ret.append(date)
 
         return sorted(list(set(ret)), reverse=False)
+
+    def regions(self):
+        """
+        Returns a list of all regions in Philippines.
+
+        :return: a list of regions
+        """
+        ret = []
+
+        for doh in self.__data:
+            reg = doh['Region']
+            if reg == '':
+                continue
+            ret.append(reg)
+
+        return sorted(list(set(ret)))
     
     def provinces(self, covid=True):
         """
@@ -107,11 +123,12 @@ class DangerousCovid:
 
         return sorted(list(set(ret)))
         
-    def cases(self, province=None, days=None, cumulative=False, active=False):
+    def cases(self, region=None, province=None, days=None, cumulative=False, active=False):
         """
         Returns a list of dict for confirmed cases. It can be filtered by
         province, last days, cumulative and whether or not it is active.
 
+        :param region: region name
         :param province: province name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
@@ -120,10 +137,22 @@ class DangerousCovid:
         """
         ret = []
         running_sum = 0
+        location_filter = None
 
-        if province is not None:
+        if region is None and province is not None:
+            location_filter = 'province'
             if province.lower() not in [p.lower() for p in self.provinces()]:
                 print(f'Province {province} is not found in database.')
+                return ret
+
+        if region is not None:  # Ignore province
+            location_filter = 'region'
+            if region.lower() not in [p.lower() for p in self.regions()]:
+                print(f'Region {region} is not found in database.')
+                print('Use regions() method of class DangerousCovid() to see acceptable region names.')
+                print('Here is the list:')
+                for p in self.regions():
+                    print(p)
                 return ret
 
         u_date = self.unique_date()
@@ -133,11 +162,11 @@ class DangerousCovid:
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
 
-                # Filter date, province and active cases
+                # Filter date, region or province and active cases
                 if (ud == date_conf and
-                        (province is None or
-                         province.lower() == doh['ProvRes'].lower())):
-
+                        (location_filter is None or
+                        (location_filter == 'province' and province.lower() == doh['Province'].lower()) or
+                        (location_filter == 'region' and region.lower() == doh['Region'].lower()))):
                     # Active cases excludes deaths and recoveries
                     if not active:
                         cnt += 1
@@ -147,7 +176,10 @@ class DangerousCovid:
 
             running_sum += cnt
             res.update({'Date': ud})
-            res.update({'Province': 'All provinces' if province is None else province})
+            if location_filter == 'province':
+                res.update({'Province': province})
+            if location_filter == 'region':
+                res.update({'Region': region})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
@@ -163,19 +195,30 @@ class DangerousCovid:
 
         return ret
     
-    def deaths(self, province=None, days=None, cumulative=False):
+    def deaths(self, region=None, province=None, days=None, cumulative=False):
         """
+        :param region: region name
         :param province: province name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
         :return: a list of dict
         """
-        ret = []
-        running_sum = 0
+        ret, running_sum, location_filter = [], 0, None
 
-        if province is not None:
+        if region is None and province is not None:
+            location_filter = 'province'
             if province.lower() not in [p.lower() for p in self.provinces()]:
                 print(f'Province {province} is not found in database.')
+                return ret
+
+        if region is not None:  # Ignore province
+            location_filter = 'region'
+            if region.lower() not in [p.lower() for p in self.regions()]:
+                print(f'Region {region} is not found in database.')
+                print('Use regions() method of class DangerousCovid() to see acceptable region names.')
+                print('Here is the list:')
+                for p in self.regions():
+                    print(p)
                 return ret
 
         u_date = self.unique_date(header='DateRepRem')
@@ -187,12 +230,16 @@ class DangerousCovid:
                     continue
                 date_rem = doh['DateRepRem']
                 if (ud == date_rem and
-                        (province is None or
-                         province.lower() == doh['ProvRes'].lower())):
+                        (location_filter is None or
+                        (location_filter == 'province' and province.lower() == doh['Province'].lower()) or
+                        (location_filter == 'region' and region.lower() == doh['Region'].lower()))):
                     cnt += 1
             running_sum += cnt
             res.update({'Date': ud})
-            res.update({'Province': 'All provinces' if province is None else province})
+            if location_filter == 'province':
+                res.update({'Province': province})
+            if location_filter == 'region':
+                res.update({'Region': region})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
@@ -208,19 +255,30 @@ class DangerousCovid:
 
         return ret
     
-    def recoveries(self, province=None, days=None, cumulative=False):
+    def recoveries(self, region=None, province=None, days=None, cumulative=False):
         """
+        :param region: region name
         :param province: province name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
         :return: a list of dict
         """
-        ret = []
-        running_sum = 0
+        ret, running_sum, location_filter = [], 0, None
 
-        if province is not None:
+        if region is None and province is not None:
+            location_filter = 'province'
             if province.lower() not in [p.lower() for p in self.provinces()]:
                 print(f'Province {province} is not found in database.')
+                return ret
+
+        if region is not None:  # Ignore province
+            location_filter = 'region'
+            if region.lower() not in [p.lower() for p in self.regions()]:
+                print(f'Region {region} is not found in database.')
+                print('Use regions() method of class DangerousCovid() to see acceptable region names.')
+                print('Here is the list:')
+                for p in self.regions():
+                    print(p)
                 return ret
 
         u_date = self.unique_date(header='DateRepRem')
@@ -232,12 +290,16 @@ class DangerousCovid:
                     continue
                 date_rem = doh['DateRepRem']
                 if (ud == date_rem and
-                        (province is None or
-                         province.lower() == doh['ProvRes'].lower())):
+                        (location_filter is None or
+                        (location_filter == 'province' and province.lower() == doh['Province'].lower()) or
+                        (location_filter == 'region' and region.lower() == doh['Region'].lower()))):
                     cnt += 1
             running_sum += cnt
             res.update({'Date': ud})
-            res.update({'Province': 'All provinces' if province is None else province})
+            if location_filter == 'province':
+                res.update({'Province': province})
+            if location_filter == 'region':
+                res.update({'Region': region})
             res.update({'Count': running_sum if cumulative else cnt})
             ret.append(res)
 
