@@ -45,16 +45,16 @@ for c in cases:
 ##### Output
 ```
 Confirmed cases in the last 7 days:
+2020-05-04, 262
+2020-05-03, 295
 2020-05-02, 156
 2020-05-01, 284
 2020-04-30, 276
 2020-04-29, 254
 2020-04-28, 181
-2020-04-27, 198
-2020-04-26, 285
 ```
 
-#### Example 2: Get cases in Bulacan province in the last 14 days
+#### Example 2: Get daily cases in Bulacan province in the last 14 days
 ##### Code
 ```python
 import covidphi
@@ -69,20 +69,52 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
+2020-05-04, 1
+2020-05-03, 0
+2020-05-02, 0
+2020-05-01, 0
 2020-04-30, 1
-2020-04-29, 1
+2020-04-29, 7
 2020-04-28, 1
-2020-04-27, 3
+2020-04-27, 2
 2020-04-26, 3
 2020-04-25, 0
 2020-04-24, 1
 2020-04-23, 2
-2020-04-22, 2
+2020-04-22, 1
 2020-04-21, 0
-2020-04-20, 2
-2020-04-19, 1
-2020-04-18, 2
-2020-04-17, 3
+```
+
+#### Example 2.1: Get Cumulative all confirmed cases at Bulacan in the last 14 days
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+days, prov = 14, 'Bulacan'
+print(f'Cumulative all confirmed cases at {prov} in the last {days} days:')
+cc = covid.cases(province=prov, days=days, cumulative=True)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+
+##### Output
+```
+Cumulative all confirmed cases at Bulacan in the last 14 days:
+2020-05-04, 124
+2020-05-03, 123
+2020-05-02, 123
+2020-05-01, 123
+2020-04-30, 123
+2020-04-29, 122
+2020-04-28, 115
+2020-04-27, 114
+2020-04-26, 112
+2020-04-25, 109
+2020-04-24, 109
+2020-04-23, 108
+2020-04-22, 106
+2020-04-21, 105
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -99,14 +131,13 @@ for d in death:
 ##### Output
 ```
 Cumulative deaths in Philippines:
-2020-04-30, 567
-2020-04-29, 557
-2020-04-28, 529
-2020-04-27, 510
-2020-04-26, 500
-2020-04-25, 493
-2020-04-24, 476
-2020-04-23, 461
+2020-05-04, 623
+2020-05-03, 607
+2020-05-02, 603
+2020-05-01, 579
+2020-04-30, 568
+2020-04-29, 558
+2020-04-28, 530
 ...
 ```
 
@@ -141,21 +172,21 @@ import covidphi
 
 covid = covidphi.DangerousCovid()
 print(f'Cumulative all confirmed cases in Philippines')
-cc = covid.cases(province=None, days=None, cumulative=True)  # a list of dictionary
+cc = covid.cases(province=None, days=None, cumulative=True)
 for c in cc:
     print(f'{c["Date"]}, {c["Count"]}')
 ```
 
 ##### Output
 ```
-Cumulative confirmed cases in Philippines
+Cumulative all confirmed cases in Philippines
+2020-05-04, 9485
+2020-05-03, 9223
 2020-05-02, 8928
 2020-05-01, 8772
 2020-04-30, 8488
 2020-04-29, 8212
 2020-04-28, 7958
-2020-04-27, 7777
-2020-04-26, 7579
 ...
 ```
 
@@ -176,13 +207,13 @@ for c in cc:
 ```
 Cumulative active confirmed cases in Philippines:
 Active means excluding deaths and recoveries.
-2020-05-02, 7201
-2020-05-01, 7045
-2020-04-30, 6765
-2020-04-29, 6490
-2020-04-28, 6237
-2020-04-27, 6061
-2020-04-26, 5871
+2020-05-04, 7547
+2020-05-03, 7285
+2020-05-02, 6992
+2020-05-01, 6836
+2020-04-30, 6557
+2020-04-29, 6287
+2020-04-28, 6034
 ...
 ```
 
@@ -204,13 +235,13 @@ for c in cc:
 ```
 Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:
 Active means excluding deaths and recoveries.
-{'Date': '2020-05-03', 'Region': 'National Capital Region (NCR)', 'Count': 3921}
-{'Date': '2020-05-02', 'Region': 'National Capital Region (NCR)', 'Count': 3886}
-{'Date': '2020-05-01', 'Region': 'National Capital Region (NCR)', 'Count': 3851}
-{'Date': '2020-04-30', 'Region': 'National Capital Region (NCR)', 'Count': 3771}
-{'Date': '2020-04-29', 'Region': 'National Capital Region (NCR)', 'Count': 3719}
-{'Date': '2020-04-28', 'Region': 'National Capital Region (NCR)', 'Count': 3564}
-{'Date': '2020-04-27', 'Region': 'National Capital Region (NCR)', 'Count': 3504}
+{'Date': '2020-05-04', 'Region': 'National Capital Region (NCR)', 'Count': 3986}
+{'Date': '2020-05-03', 'Region': 'National Capital Region (NCR)', 'Count': 3915}
+{'Date': '2020-05-02', 'Region': 'National Capital Region (NCR)', 'Count': 3870}
+{'Date': '2020-05-01', 'Region': 'National Capital Region (NCR)', 'Count': 3835}
+{'Date': '2020-04-30', 'Region': 'National Capital Region (NCR)', 'Count': 3749}
+{'Date': '2020-04-29', 'Region': 'National Capital Region (NCR)', 'Count': 3692}
+{'Date': '2020-04-28', 'Region': 'National Capital Region (NCR)', 'Count': 3536}
 ```
 
 #### Example 8: Provinces without COVID19 cases
