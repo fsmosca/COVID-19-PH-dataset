@@ -43,10 +43,10 @@ def main():
     for c in cc:
         print(f'{c["Date"]}, {c["Province"]}, {c["Count"]}')
 
-    # (6) Print confirmed cases in NCR for all days with records.
-    days, place = 14, 'NCR'
+    # (6) Print confirmed cases in NCR.
+    place = 'National Capital Region (NCR)'
     print(f'Confirmed cases in {place}:')
-    cc = covid.cases(province=place, days=None)
+    cc = covid.cases(region=place, days=None)
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
 
@@ -65,13 +65,13 @@ def main():
 
     # (9) Cumulative recoveries in NCR in the last 14 days
     print('Cumulative recoveries in NCR in the last 14 days:')
-    recovered = covid.recoveries(province='NCR', days=14, cumulative=True)
+    recovered = covid.recoveries(region='National Capital Region (NCR)', days=14, cumulative=True)
     for r in recovered:
         print(f'{r["Date"]}, {r["Count"]}')
 
     # (10) Cumulative deaths in NCR
     print('Cumulative deaths in NCR:')
-    death = covid.deaths(province='NCR', days=None, cumulative=True)
+    death = covid.deaths(region='National Capital Region (NCR)', days=None, cumulative=True)
     for d in death:
         print(f'{d["Date"]}, {d["Count"]}')
 
