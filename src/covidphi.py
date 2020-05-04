@@ -74,16 +74,37 @@ class DangerousCovid:
 
         return sorted(list(set(ret)), reverse=False)
     
-    def provinces(self):
+    def provinces(self, covid=True):
         """
-        :return: a list of provinces found in the data file.
+        Returns a list of provinces depending on the parameter covid. If covid
+        is true then provinces with covid will be extracted, otherwise provinces
+        without covid cases will be extracted. Default covid is true.
+
+        :covid: if true it will return provinces with covid else without covid
+        :return: a list of provinces
         """
         ret = []
-        for doh in self.__data:
-            prov = doh['ProvRes']
-            if prov == '':
-                continue
-            ret.append(prov)
+
+        if covid:
+            for doh in self.__data:
+                prov = doh['Province']
+                if prov == '':
+                    continue
+                ret.append(prov)
+        else:
+            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
+            psgc = DangerousCovid.__read_csv(psgc_file)
+            for p in psgc:
+                if p['Geographic Level'] == 'Prov':
+                    psgc_prov_name = p['Name']
+                    found = False
+                    for doh in self.__data:
+                        if doh['Province'].lower() == psgc_prov_name.lower():
+                            found = True
+                            break
+                    if not found:
+                        ret.append(psgc_prov_name.title())
+
         return sorted(list(set(ret)))
         
     def cases(self, province=None, days=None, cumulative=False, active=False):
