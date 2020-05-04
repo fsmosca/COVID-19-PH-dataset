@@ -75,7 +75,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Tuao, Cagayan","Tuao, Cagayan, Philippines",Philippines,Luzon,Cagayan Valley,Cagayan,Cagayan,Tuao,,Tuao,17.699209,121.5038763
 "Abucay, Bataan","Abucay, Bataan, Philippines",Philippines,Luzon,Central Luzon,Bataan,Bataan,Abucay,,Abucay,14.7128091,120.4933624
 "Santa Rosa, Nueva Ecija","Santa Rosa, Nueva Ecija, Philippines",Philippines,Luzon,Central Luzon,Nueva Ecija,Nueva Ecija,Santa Rosa,,Santa Rosa,15.4250546,120.9383613
-"City of Tagum (Capital), Davao del Norte","City of Tagum (Capital), Davao del Norte, Philippines",Philippines,Mindanao,Davao Region,Davao del Norte,Davao del Norte,Tagum City,Tagum City,,7.447777499999999,125.8040034
+"City of Tagum (Capital), Davao del Norte","City of Tagum (Capital), Davao del Norte, Philippines",Philippines,Mindanao,Davao Region,Davao del Norte,Davao del Norte,Tagum City,Tagum City,,7.4477775,125.8040034
 "Tarangnan, Samar (Western Samar)","Tarangnan, Samar (Western Samar), Philippines",Philippines,Visayas,Eastern Visayas,Samar,Samar,Tarangnan,,Tarangnan,11.9181321,124.7887384
 "Caluya, Antique","Caluya, Antique, Philippines",Philippines,Visayas,Western Visayas,Antique,Antique,Caluya,,Caluya,12.0684185,121.3908982
 "Alicia, Isabela","Alicia, Isabela, Philippines",Philippines,Luzon,Cagayan Valley,Isabela,Isabela,Alicia,,Alicia,16.806905,121.6967438
@@ -104,7 +104,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Maragondon, Cavite","Maragondon, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Maragondon,,Maragondon,14.2529507,120.734995
 "City of Meycauayan, Bulacan","City of Meycauayan, Bulacan, Philippines",Philippines,Luzon,Central Luzon,Bulacan,Bulacan,Meycauayan City,Meycauayan City,,14.7498856,120.9739288
 "Bongabong, Oriental Mindoro","Bongabong, Oriental Mindoro, Philippines",Philippines,Luzon,MIMAROPA,Oriental Mindoro,Oriental Mindoro,Bongabong,,Bongabong,12.7075664,121.3998995
-"Iligan City, Lanao del Norte","Iligan City, Lanao del Norte, Philippines",Philippines,Mindanao,Northern Mindanao,Lanao del Norte,Lanao del Norte,Iligan City,Iligan City,,8.228020899999999,124.2452422
+"Iligan City, Lanao del Norte","Iligan City, Lanao del Norte, Philippines",Philippines,Mindanao,Northern Mindanao,Lanao del Norte,Lanao del Norte,Iligan City,Iligan City,,8.2280209,124.2452422
 "City of Alaminos, Pangasinan","City of Alaminos, Pangasinan, Philippines",Philippines,Luzon,Ilocos Region,Pangasinan,Pangasinan,Alaminos City,Alaminos City,,16.1505291,119.9856157
 "City of General Trias, Cavite","City of General Trias, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,General Trias City,General Trias City,,14.3214094,120.907304
 "Libmanan, Camarines Sur","Libmanan, Camarines Sur, Philippines",Philippines,Luzon,Bicol,Camarines Sur,Camarines Sur,Libmanan,,Libmanan,13.6828973,122.9663018
@@ -127,7 +127,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Pagsanjan, Laguna","Pagsanjan, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Pagsanjan,,Pagsanjan,14.2624365,121.4570447
 "City of Panabo, Davao del Norte","City of Panabo, Davao del Norte, Philippines",Philippines,Mindanao,Davao Region,Davao del Norte,Davao del Norte,Panabo City,Panabo City,,7.3087068,125.6841178
 "Malasiqui, Pangasinan","Malasiqui, Pangasinan, Philippines",Philippines,Luzon,Ilocos Region,Pangasinan,Pangasinan,Malasiqui,,Malasiqui,15.9195445,120.4588059
-"Cotabato City, Cotabato City (not a province)","Cotabato City, Philippines",Philippines,Mindanao,BARMM,Maguindanao,,Cotabato City,Cotabato City,,7.2046668,124.2310439
+"Cotabato City, Cotabato City (not a province)","Cotabato City, Philippines",Philippines,Mindanao,BARMM,,,Cotabato City,Cotabato City,,7.2046668,124.2310439
 "San Leonardo, Nueva Ecija","San Leonardo, Nueva Ecija, Philippines",Philippines,Luzon,Central Luzon,Nueva Ecija,Nueva Ecija,San Leonardo,,San Leonardo,15.3728539,120.9532123
 "City of Tayabas, Quezon","City of Tayabas, Quezon, Philippines",Philippines,Luzon,Calabarzon,Quezon,Quezon,Tayabas City,Tayabas City,,14.0363869,121.6532692
 "Mabalacat City, Pampanga","Mabalacat City, Pampanga, Philippines",Philippines,Luzon,Central Luzon,Pampanga,Pampanga,Mabalacat City,Mabalacat City,,15.2228709,120.5744387
@@ -166,8 +166,8 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "San Carlos City, Pangasinan","San Carlos City, Pangasinan, Philippines",Philippines,Luzon,Ilocos Region,Pangasinan,Pangasinan,San Carlos City,San Carlos City,,15.8989343,120.3204873
 "Lutayan, Sultan Kudarat","Lutayan, Sultan Kudarat, Philippines",Philippines,Mindanao,SOCCSKSARGEN,Sultan Kudarat,Sultan Kudarat,Lutayan,,Lutayan,6.5967939,124.8844867
 "Piat, Cagayan","Piat, Cagayan, Philippines",Philippines,Luzon,Cagayan Valley,Cagayan,Cagayan,Piat,,Piat,17.7531544,121.5598345
-"City of Kidapawan (Capital), Cotabato (North Cotabato)","City of Kidapawan (Capital), Cotabato (North Cotabato), Philippines",Philippines,Mindanao,SOCCSKSARGEN,Cotabato,Cotabato,Kidapawan City,Kidapawan City,,7.010606999999999,125.0911341
-"Tudela, Misamis Occidental","Tudela, Misamis Occidental, Philippines",Philippines,Mindanao,Northern Mindanao,Misamis Occidental,Misamis Occidental,Tudela,,Tudela,8.247742299999999,123.7629465
+"City of Kidapawan (Capital), Cotabato (North Cotabato)","City of Kidapawan (Capital), Cotabato (North Cotabato), Philippines",Philippines,Mindanao,SOCCSKSARGEN,Cotabato,Cotabato,Kidapawan City,Kidapawan City,,7.010607,125.0911341
+"Tudela, Misamis Occidental","Tudela, Misamis Occidental, Philippines",Philippines,Mindanao,Northern Mindanao,Misamis Occidental,Misamis Occidental,Tudela,,Tudela,8.2477423,123.7629465
 "San Felipe, Zambales","San Felipe, Zambales, Philippines",Philippines,Luzon,Central Luzon,Zambales,Zambales,San Felipe,,San Felipe,15.0660307,120.0685217
 "Pandan, Antique","Pandan, Antique, Philippines",Philippines,Visayas,Western Visayas,Antique,Antique,Pandan,,Pandan,11.74214,122.0994209
 "City of Urdaneta, Pangasinan","City of Urdaneta, Pangasinan, Philippines",Philippines,Luzon,Ilocos Region,Pangasinan,Pangasinan,Urdaneta City,Urdaneta City,,15.9758027,120.5706933
@@ -192,7 +192,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Taal, Batangas","Taal, Batangas, Philippines",Philippines,Luzon,Calabarzon,Batangas,Batangas,Taal,,Taal,13.8893119,120.9359987
 "Atimonan, Quezon","Atimonan, Quezon, Philippines",Philippines,Luzon,Calabarzon,Quezon,Quezon,Atimonan,,Atimonan,13.9966108,121.9180499
 "Bokod, Benguet","Bokod, Benguet, Philippines",Philippines,Luzon,CAR,Benguet,Benguet,Bokod,,Bokod,16.4564063,120.7809676
-"Panglao, Bohol","Panglao, Bohol, Philippines",Philippines,Visayas,Central Visayas,Bohol,Bohol,Panglao,,Panglao,9.573142899999999,123.7629465
+"Panglao, Bohol","Panglao, Bohol, Philippines",Philippines,Visayas,Central Visayas,Bohol,Bohol,Panglao,,Panglao,9.5731429,123.7629465
 "Jimenez, Misamis Occidental","Jimenez, Misamis Occidental, Philippines",Philippines,Mindanao,Northern Mindanao,Misamis Occidental,Misamis Occidental,Jimenez,,Jimenez,8.3227548,123.7629465
 "San Juan, La Union","San Juan, La Union, Philippines",Philippines,Luzon,Ilocos Region,La Union,La Union,San Juan,,San Juan,16.6719671,120.3627578
 "Binalonan, Pangasinan","Binalonan, Pangasinan, Philippines",Philippines,Luzon,Ilocos Region,Pangasinan,Pangasinan,Binalonan,,Binalonan,16.0658528,120.5969758
@@ -218,13 +218,13 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Concepcion, Tarlac","Concepcion, Tarlac, Philippines",Philippines,Luzon,Central Luzon,Tarlac,Tarlac,Concepcion,,Concepcion,15.3230428,120.6523622
 "Sampaloc, Quezon","Sampaloc, Quezon, Philippines",Philippines,Luzon,Calabarzon,Quezon,Quezon,Sampaloc,,Sampaloc,14.1774396,121.6169002
 "Alaminos, Laguna","Alaminos, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Alaminos,,Alaminos,14.0616209,121.2603964
-"Mahinog, Camiguin","Mahinog, Camiguin, Philippines",Philippines,Mindanao,Northern Mindanao,Camiguin,Camiguin,Mahinog,,Mahinog,9.160185199999999,124.7630307
+"Mahinog, Camiguin","Mahinog, Camiguin, Philippines",Philippines,Mindanao,Northern Mindanao,Camiguin,Camiguin,Mahinog,,Mahinog,9.1601852,124.7630307
 "Dinalupihan, Bataan","Dinalupihan, Bataan, Philippines",Philippines,Luzon,Central Luzon,Bataan,Bataan,Dinalupihan,,Dinalupihan,14.8780629,120.4545801
 "Paete, Laguna","Paete, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Paete,,Paete,14.367518,121.5299539
 "Tubod (Capital), Lanao del Norte","Tubod (Capital), Lanao del Norte, Philippines",Philippines,Mindanao,Northern Mindanao,Lanao del Norte,Lanao del Norte,Tubod,,Tubod,8.055336,123.8097147
 "San Enrique, Iloilo","San Enrique, Iloilo, Philippines",Philippines,Visayas,Western Visayas,Iloilo,Iloilo,San Enrique,,San Enrique,11.1098942,122.7294309
 "Rosario, Cavite","Rosario, Cavite, Philippines",Philippines,Luzon,Calabarzon,Cavite,Cavite,Rosario,,Rosario,14.4139543,120.857155
-"Pantukan, Compostela Valley","Pantukan, Compostela Valley, Philippines",Philippines,Mindanao,Davao Region,Compostela Valley,Compostela Valley,Pantukan,,Pantukan,7.255221700000001,126.1562026
+"Pantukan, Compostela Valley","Pantukan, Compostela Valley, Philippines",Philippines,Mindanao,Davao Region,Compostela Valley,Compostela Valley,Pantukan,,Pantukan,7.2552217,126.1562026
 "City of Batac, Ilocos Norte","City of Batac, Ilocos Norte, Philippines",Philippines,Luzon,Ilocos Region,Ilocos Norte,Ilocos Norte,Batac City,Batac City,,18.0460318,120.5940777
 "Iloilo City (Capital), Iloilo","Iloilo City (Capital), Iloilo, Philippines",Philippines,Visayas,Western Visayas,Iloilo,Iloilo,Iloilo City,Iloilo City,,10.7096727,122.5532949
 "Camiling, Tarlac","Camiling, Tarlac, Philippines",Philippines,Luzon,Central Luzon,Tarlac,Tarlac,Camiling,,Camiling,15.6871913,120.4182522
@@ -257,7 +257,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Floridablanca, Pampanga","Floridablanca, Pampanga, Philippines",Philippines,Luzon,Central Luzon,Pampanga,Pampanga,Floridablanca,,Floridablanca,14.9350752,120.4938501
 "Sipocot, Camarines Sur","Sipocot, Camarines Sur, Philippines",Philippines,Luzon,Bicol,Camarines Sur,Camarines Sur,Sipocot,,Sipocot,13.7628395,122.9621976
 "Cabangan, Zambales","Cabangan, Zambales, Philippines",Philippines,Luzon,Central Luzon,Zambales,Zambales,Cabangan,,Cabangan,15.1580579,120.0552506
-"Datu Odin Sinsuat (Dinaig), Maguindanao","Datu Odin Sinsuat (Dinaig), Maguindanao, Philippines",Philippines,Mindanao,BARMM,Maguindanao,Maguindanao,Datu Odin Sinsuat,,Datu Odin Sinsuat,7.082862599999999,124.2643871
+"Datu Odin Sinsuat (Dinaig), Maguindanao","Datu Odin Sinsuat (Dinaig), Maguindanao, Philippines",Philippines,Mindanao,BARMM,Maguindanao,Maguindanao,Datu Odin Sinsuat,,Datu Odin Sinsuat,7.0828626,124.2643871
 "Gasan, Marinduque","Gasan, Marinduque, Philippines",Philippines,Luzon,MIMAROPA,Marinduque,Marinduque,Gasan,,Gasan,13.312811,121.8790306
 "Alitagtag, Batangas","Alitagtag, Batangas, Philippines",Philippines,Luzon,Calabarzon,Batangas,Batangas,Alitagtag,,Alitagtag,13.8721364,121.0220422
 "Santo Tomas, La Union","Santo Tomas, La Union, Philippines",Philippines,Luzon,Ilocos Region,La Union,La Union,Santo Tomas,,Santo Tomas,16.2753212,120.4011911
@@ -291,7 +291,7 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Mansalay, Oriental Mindoro","Mansalay, Oriental Mindoro, Philippines",Philippines,Luzon,MIMAROPA,Oriental Mindoro,Oriental Mindoro,Mansalay,,Mansalay,12.520154,121.438851
 "City of Digos (Capital), Davao del Sur","City of Digos (Capital), Davao del Sur, Philippines",Philippines,Mindanao,Davao Region,Davao del Sur,Davao del Sur,Digos City,Digos City,,6.766056,125.3066951
 "Santa Ana, Pampanga","Santa Ana, Pampanga, Philippines",Philippines,Luzon,Central Luzon,Pampanga,Pampanga,Santa Ana,,Santa Ana,15.1091694,120.769476
-"City of Koronadal (Capital), South Cotabato","City of Koronadal (Capital), South Cotabato, Philippines",Philippines,Mindanao,SOCCSKSARGEN,South Cotabato,South Cotabato,Koronadal City,Koronadal City,,6.493575799999999,124.8382527
+"City of Koronadal (Capital), South Cotabato","City of Koronadal (Capital), South Cotabato, Philippines",Philippines,Mindanao,SOCCSKSARGEN,South Cotabato,South Cotabato,Koronadal City,Koronadal City,,6.4935758,124.8382527
 "City of Tacurong, Sultan Kudarat","City of Tacurong, Sultan Kudarat, Philippines",Philippines,Mindanao,SOCCSKSARGEN,Sultan Kudarat,Sultan Kudarat,Tacurong City,Tacurong City,,6.6879658,124.6787735
 "San Ildefonso, Bulacan","San Ildefonso, Bulacan, Philippines",Philippines,Luzon,Central Luzon,Bulacan,Bulacan,San Ildefonso,,San Ildefonso,15.0417552,121.0105733
 "Matanao, Davao del Sur","Matanao, Davao del Sur, Philippines",Philippines,Mindanao,Davao Region,Davao del Sur,Davao del Sur,Matanao,,Matanao,6.7525856,125.2381713
@@ -313,8 +313,8 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Lobo, Batangas","Lobo, Batangas, Philippines",Philippines,Luzon,Calabarzon,Batangas,Batangas,Lobo,,Lobo,13.6750074,121.2401455
 "Camalig, Albay","Camalig, Albay, Philippines",Philippines,Luzon,Bicol,Albay,Albay,Camalig,,Camalig,13.1658685,123.6386144
 "General Santos City (Dadiangas), South Cotabato","General Santos City (Dadiangas), South Cotabato, Philippines",Philippines,Mindanao,SOCCSKSARGEN,South Cotabato,South Cotabato,General Santos City,General Santos City,,6.1432733,125.1928634
-"Dumalinao, Zamboanga del Sur","Dumalinao, Zamboanga del Sur, Philippines",Philippines,Mindanao,Zamboanga Peninsula,Zamboanga del Sur,Zamboanga del Sur,Dumalinao,,Dumalinao,7.787917299999998,123.3710571
-"Candoni, Negros Occidental","Candoni, Negros Occidental, Philippines",Philippines,Visayas,Western Visayas,Negros Occidental,Negros Occidental,Candoni,,Candoni,9.761059200000002,122.650351
+"Dumalinao, Zamboanga del Sur","Dumalinao, Zamboanga del Sur, Philippines",Philippines,Mindanao,Zamboanga Peninsula,Zamboanga del Sur,Zamboanga del Sur,Dumalinao,,Dumalinao,7.7879173,123.3710571
+"Candoni, Negros Occidental","Candoni, Negros Occidental, Philippines",Philippines,Visayas,Western Visayas,Negros Occidental,Negros Occidental,Candoni,,Candoni,9.7610592,122.650351
 "City of San Fernando (Capital), La Union","City of San Fernando (Capital), La Union, Philippines",Philippines,Luzon,Ilocos Region,La Union,La Union,San Fernando City,San Fernando City,,16.613068,120.318504
 "Talugtug, Nueva Ecija","Talugtug, Nueva Ecija, Philippines",Philippines,Luzon,Central Luzon,Nueva Ecija,Nueva Ecija,Talugtug,,Talugtug,15.7698001,120.8154358
 "Pio Duran, Albay","Pio Duran, Albay, Philippines",Philippines,Luzon,Bicol,Albay,Albay,Pio Duran,,Pio Duran,13.0473044,123.4607744
@@ -346,14 +346,14 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "City of Carcar, Cebu","City of Carcar, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,Carcar City,Carcar City,,10.1151105,123.6399562
 "Baggao, Cagayan","Baggao, Cagayan, Philippines",Philippines,Luzon,Cagayan Valley,Cagayan,Cagayan,Baggao,,Baggao,17.8814458,121.8725374
 "Balaoan, La Union","Balaoan, La Union, Philippines",Philippines,Luzon,Ilocos Region,La Union,La Union,Balaoan,,Balaoan,16.8022485,120.4011911
-"Aurora, Zamboanga del Sur","Aurora, Zamboanga del Sur, Philippines",Philippines,Mindanao,Zamboanga Peninsula,Zamboanga del Sur,Zamboanga del Sur,Aurora,,Aurora,7.954580399999998,123.5951925
+"Aurora, Zamboanga del Sur","Aurora, Zamboanga del Sur, Philippines",Philippines,Mindanao,Zamboanga Peninsula,Zamboanga del Sur,Zamboanga del Sur,Aurora,,Aurora,7.9545804,123.5951925
 "City of Ligao, Albay","City of Ligao, Albay, Philippines",Philippines,Luzon,Bicol,Albay,Albay,Ligao City,Ligao City,,13.1724166,123.4943968
 "Boliney, Abra","Boliney, Abra, Philippines",Philippines,Luzon,CAR,Abra,Abra,Boliney,,Boliney,17.3674569,120.8728615
-"Indanan, Sulu","Indanan, Sulu, Philippines",Philippines,Mindanao,BARMM,Sulu,Sulu,Indanan,,Indanan,5.997678899999999,120.9646866
+"Indanan, Sulu","Indanan, Sulu, Philippines",Philippines,Mindanao,BARMM,Sulu,Sulu,Indanan,,Indanan,5.9976789,120.9646866
 "Catmon, Cebu","Catmon, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,Catmon,,Catmon,10.7208936,124.0121178
 "Minglanilla, Cebu","Minglanilla, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,Minglanilla,,Minglanilla,10.2433023,123.7889922
 "Bantayan, Cebu","Bantayan, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,Bantayan,,Bantayan,11.1695121,123.7265836
-"Candijay, Bohol","Candijay, Bohol, Philippines",Philippines,Visayas,Central Visayas,Bohol,Bohol,Candijay,,Candijay,9.825796700000001,124.4863567
+"Candijay, Bohol","Candijay, Bohol, Philippines",Philippines,Visayas,Central Visayas,Bohol,Bohol,Candijay,,Candijay,9.8257967,124.4863567
 "City of Naga, Cebu","City of Naga, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,City of Naga,City of Naga,,10.2084984,123.7572942
 "Calabanga, Camarines Sur","Calabanga, Camarines Sur, Philippines",Philippines,Luzon,Bicol,Camarines Sur,Camarines Sur,Calabanga,,Calabanga,13.7163289,123.2812562
 "Liloan, Cebu","Liloan, Cebu, Philippines",Philippines,Visayas,Central Visayas,Cebu,Cebu,Liloan,,Liloan,10.412129,123.986149
@@ -365,3 +365,6 @@ DOHCityMunProvRes,LookUpAddress,Country,MainIsland,Region,ProvOrMetroManila,Prov
 "Loboc, Bohol","Loboc, Bohol, Philippines",Philippines,Visayas,Central Visayas,Bohol,Bohol,Loboc,,Loboc,9.6581656,124.0307246
 "Ilagan City (Capital), Isabela","Ilagan City (Capital), Isabela, Philippines",Philippines,Luzon,Cagayan Valley,Isabela,Isabela,Ilagan City,Ilagan City,,17.1381186,121.8734492
 "Buenavista, Guimaras","Buenavista, Guimaras, Philippines",Philippines,Visayas,Western Visayas,Guimaras,Guimaras,Buenavista,,Buenavista,10.6967157,122.650351
+"City of Catbalogan (Capital), Samar (Western Samar)","City of Catbalogan (Capital), Samar (Western Samar), Philippines",Philippines,Visayas,Eastern Visayas,Samar,Samar,Catbalogan City,Catbalogan City,,11.8240433,124.8403408
+"Bacnotan, La Union","Bacnotan, La Union, Philippines",Philippines,Luzon,Ilocos Region,La Union,La Union,Bacnotan,,Bacnotan,16.7339713,120.3666099
+"Magdalena, Laguna","Magdalena, Laguna, Philippines",Philippines,Luzon,Calabarzon,Laguna,Laguna,Magdalena,,Magdalena,14.204077,121.43419
