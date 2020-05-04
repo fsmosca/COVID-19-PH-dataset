@@ -36,8 +36,8 @@ Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)
 ```python
 import covidphi
 
-daily_info = covidphi.DangerousCovid()
-cases = daily_info.cases(days=7)
+covid = covidphi.DangerousCovid()
+cases = covid.cases(days=7)
 print('Confirmed cases in the last 7 days:')
 for c in cases:
     print(f'{c["Date"]}, {c["Count"]}')
@@ -59,10 +59,10 @@ Confirmed cases in the last 7 days:
 ```python
 import covidphi
 
+covid = covidphi.DangerousCovid()
 days, prov = 14, 'Bulacan'
 print(f'Confirmed cases at {prov} in the last {days} days:')
-daily_info = covidphi.DangerousCovid()
-cc = daily_info.cases(province=prov, days=days)
+cc = covid.cases(province=prov, days=days)
 for c in cc:
     print(f'{c["Date"]}, {c["Count"]}')
 ```
@@ -90,9 +90,9 @@ Confirmed cases at Bulacan in the last 14 days:
 ```python
 import covidphi
 
+covid = covidphi.DangerousCovid()
 print('Cumulative deaths in Philippines:')
-info = covidphi.DangerousCovid()
-death = info.deaths(province=None, days=None, cumulative=True)
+death = covid.deaths(province=None, days=None, cumulative=True)
 for d in death:
     print(f'{d["Date"]}, {d["Count"]}')
 ```
@@ -115,9 +115,9 @@ Cumulative deaths in Philippines:
 ```python
 import covidphi
 
+covid = covidphi.DangerousCovid()
 print(f'Patients info with geo location:')
-info = covidphi.DangerousCovid()
-persons = info.patients(date=True, cityortown=False, province=False, geo=True)
+persons = covid.patients(date=True, cityortown=False, province=False, geo=True)
 for p in persons:
     print(p)
 ```
@@ -137,6 +137,9 @@ Patients info with geo location:
 #### Example 5: Get cumulative all confirmed cases in Philippines
 ##### Code
 ```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
 print(f'Cumulative all confirmed cases in Philippines')
 cc = covid.cases(province=None, days=None, cumulative=True)  # a list of dictionary
 for c in cc:
@@ -159,6 +162,9 @@ Cumulative confirmed cases in Philippines
 #### Example 6: Cumulative active confirmed cases in Philippines
 ##### Code
 ```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
 print(f'Cumulative active confirmed cases in Philippines:')
 print('Active means excluding deaths and recoveries.')
 cc = covid.cases(province=None, days=None, cumulative=True, active=True)
@@ -183,24 +189,101 @@ Active means excluding deaths and recoveries.
 #### Example 7: Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days
 ##### Code
 ```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
 print(f'Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:')
 print('Active means excluding deaths and recoveries.')
-cc = covid.cases(province='NCR', days=7, cumulative=True, active=True)
+region_name = 'National Capital Region (NCR)'
+cc = covid.cases(region=region_name, province=None, days=7, cumulative=True, active=True)
 for c in cc:
-    print(f'{c["Date"]}, {c["Count"]}')
+    print(c)
 ```
 
 ##### Output
 ```
 Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:
 Active means excluding deaths and recoveries.
-2020-05-02, 3878
-2020-05-01, 3843
-2020-04-30, 3763
-2020-04-29, 3741
-2020-04-28, 3628
-2020-04-27, 3572
-2020-04-26, 3516
+{'Date': '2020-05-03', 'Region': 'National Capital Region (NCR)', 'Count': 3921}
+{'Date': '2020-05-02', 'Region': 'National Capital Region (NCR)', 'Count': 3886}
+{'Date': '2020-05-01', 'Region': 'National Capital Region (NCR)', 'Count': 3851}
+{'Date': '2020-04-30', 'Region': 'National Capital Region (NCR)', 'Count': 3771}
+{'Date': '2020-04-29', 'Region': 'National Capital Region (NCR)', 'Count': 3719}
+{'Date': '2020-04-28', 'Region': 'National Capital Region (NCR)', 'Count': 3564}
+{'Date': '2020-04-27', 'Region': 'National Capital Region (NCR)', 'Count': 3504}
+```
+
+#### Example 8: Provinces without COVID19 cases
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print('Provinces without COVID19 cases:')
+for p in covid.provinces(covid=False):
+    print(p)
+```
+
+##### Output
+```
+Provinces without COVID19 cases:
+Agusan Del Sur
+Apayao
+Aurora
+Basilan
+Batanes
+Biliran
+Camarines Norte
+Davao Occidental
+Dinagat Islands
+Eastern Samar
+Kalinga
+Masbate
+Mountain Province
+Quirino
+Sarangani
+Siquijor
+Sorsogon
+Southern Leyte
+Surigao Del Norte
+Surigao Del Sur
+Tawi-Tawi
+Zamboanga Del Norte
+Zamboanga Sibugay
+```
+
+#### Example 9: Get all region names, this can be used as filter on cases, deaths and recoveries methods
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print('Regions:')
+regions = covid.regions()
+for r in regions:
+    print(r)
+```
+
+##### Output
+```
+Regions:
+Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)
+Cordillera Administrative Region (CAR)
+MIMAROPA Region
+National Capital Region (NCR)
+Region I (Ilocos Region)
+Region II (Cagayan Valley)
+Region III (Central Luzon)
+Region IV-A (CALABARZON)
+Region IX (Zamboanga Peninsula)
+Region V (Bicol Region)
+Region VI (Western Visayas)
+Region VII (Central Visayas)
+Region VIII (Eastern Visayas)
+Region X (Northern Mindanao)
+Region XI (Davao Region)
+Region XII (SOCCSKSARGEN)
+Region XIII (Caraga)
 ```
 
 See sample.py in src folder for more examples.
