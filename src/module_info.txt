@@ -41,16 +41,22 @@ CLASSES
      |  __init__(self, doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv')
      |      Initialize self.  See help(type(self)) for accurate signature.
      |
-     |  cases(self, province=None, days=None, cummulative=False)
+     |  cases(self, region=None, province=None, days=None, cumulative=False, active=False)
+     |      Returns a list of dict for confirmed cases. It can be filtered by
+     |      province, last days, cumulative and whether or not it is active.
+     |
+     |      :param region: region name
      |      :param province: province name
      |      :param days: number of days from latest
-     |      :param cummulative: a total count which includes the previous counts
+     |      :param cumulative: a total count which includes the previous counts
+     |      :param active: if true it will extract all cases except deaths and recoveries
      |      :return: a list of dict
      |
-     |  deaths(self, province=None, days=None, cummulative=False)
+     |  deaths(self, region=None, province=None, days=None, cumulative=False)
+     |      :param region: region name
      |      :param province: province name
      |      :param days: number of days from latest
-     |      :param cummulative: a total count which includes the previous counts
+     |      :param cumulative: a total count which includes the previous counts
      |      :return: a list of dict
      |
      |  patients(self, date=True, cityortown=False, province=False, geo=False)
@@ -62,17 +68,32 @@ CLASSES
      |      :param geo: if true, the latitude and longitude of patient will be extracted
      |      :return: a list of dict [{'Patient': code, 'date: yyy-mm-dd ...}, {}, ...]
      |
-     |  provinces(self)
-     |      :return: a list of provinces found in the data file.
+     |  provinces(self, covid=True)
+     |      Returns a list of provinces depending on the parameter covid. If covid
+     |      is true then provinces with covid will be extracted, otherwise provinces
+     |      without covid cases will be extracted. Default covid is true.
      |
-     |  recoveries(self, province=None, days=None, cummulative=False)
+     |      :covid: if true it will return provinces with covid else without covid
+     |      :return: a list of provinces
+     |
+     |  recoveries(self, region=None, province=None, days=None, cumulative=False)
+     |      :param region: region name
      |      :param province: province name
      |      :param days: number of days from latest
-     |      :param cummulative: a total count which includes the previous counts
+     |      :param cumulative: a total count which includes the previous counts
      |      :return: a list of dict
      |
-     |  unique_date(self)
-     |      :return: a list of unique date objects in ascending order.
+     |  regions(self)
+     |      Returns a list of all regions in Philippines.
+     |
+     |      :return: a list of regions
+     |
+     |  unique_date(self, header='DateRepConf')
+     |      When calculating confirmed cases, use the DateRepConf column. For
+     |      recoveries use the DateRepRem. For deaths use DateRepRem too.
+     |
+     |      :header: name of column with dates to use, default is confirmed date
+     |      :return: a list of unique string date ordered in ascending order
      |
      |  ----------------------------------------------------------------------
      |  Data descriptors defined here:
@@ -84,4 +105,5 @@ CLASSES
      |      list of weak references to the object (if defined)
 
 DATA
-    version = 'covidphi v0.5'
+    version = 'covidphi v0.8'
+    
