@@ -95,6 +95,12 @@ def main():
     for c in cc:
         print(f'{c["Date"]}, {c["Count"]}')
 
+    # (14) Provinces without COVID19 cases
+    print('Provinces without COVID19 cases:')
+    info = covidphi.DangerousCovid()
+    for p in info.provinces(covid=False):
+        print(p)
+
 
 if __name__ == '__main__':
     main()
