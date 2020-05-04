@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.8'
+version = 'covidphi v0.9'
 
 
 class DangerousCovid:    
@@ -56,6 +56,27 @@ class DangerousCovid:
                 ret.append(row)
 
         return ret
+
+    @staticmethod
+    def save_to_file(output_file, data):
+        """
+        Save data to file in csv format.
+
+        :param output_file: a csv filename to save the data
+        :param data: a list of dict
+        :return: None
+        """
+        try:
+            with open(output_file, 'w', newline='', encoding='utf-8') as csv_file:
+                writer = csv.DictWriter(csv_file, fieldnames=data[0].keys())
+                writer.writeheader()
+                writer.writerows(data)
+        except PermissionError:
+            print('Failed to write to csv file!')
+            raise
+        except Exception:
+            print('Unexpected exception.')
+            raise
 
     def unique_date(self, header='DateRepConf'):
         """
