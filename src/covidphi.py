@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.9'
+version = 'covidphi v0.10'
 
 
 class DangerousCovid:    
@@ -143,6 +143,13 @@ class DangerousCovid:
                         ret.append(psgc_prov_name.title())
 
         return sorted(list(set(ret)))
+
+    def data(self):
+        """
+        Returns all data in the case information database
+        :return: a list of dict, where the key in dict is the header
+        """
+        return self.__data
         
     def cases(self, region=None, province=None, days=None, cumulative=False, active=False):
         """
