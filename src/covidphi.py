@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.10'
+version = 'covidphi v0.11'
 
 
 class DangerousCovid:    
@@ -141,6 +141,42 @@ class DangerousCovid:
                             break
                     if not found:
                         ret.append(psgc_prov_name.title())
+
+        return sorted(list(set(ret)))
+
+    def cities(self, covid=True):
+        """
+        Returns a list of cities depending on the parameter covid. If covid
+        is true then cities with covid will be returned, otherwise cities
+        without covid cases will be returned. Default covid is true.
+
+        :covid: if true it will return cities with covid else without covid
+        :return: a list of cities
+        """
+        ret = []
+
+        if covid:
+            for doh in self.__data:
+                city = doh['City']
+                if city == '':
+                    continue
+                ret.append(city)
+        else:
+            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
+            psgc = DangerousCovid.__read_csv(psgc_file)
+            for p in psgc:
+                if p['Geographic Level'] == 'City':
+                    psgc_city_name = p['Name']
+                    found = False
+                    for doh in self.__data:
+                        if doh['City'].lower() == psgc_city_name.lower():
+                            found = True
+                            break
+                    if not found:
+                        psgc_city_name = psgc_city_name.title()
+                        if 'City Of ' in psgc_city_name:
+                            psgc_city_name = psgc_city_name.replace('City Of', 'City of')
+                        ret.append(psgc_city_name)
 
         return sorted(list(set(ret)))
 
