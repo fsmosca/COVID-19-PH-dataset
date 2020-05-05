@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.11'
+version = 'covidphi v0.12'
 
 
 class DangerousCovid:    
@@ -187,13 +187,16 @@ class DangerousCovid:
         """
         return self.__data
         
-    def cases(self, region=None, province=None, days=None, cumulative=False, active=False):
+    def cases(self, region=None, province=None, city=None, days=None, cumulative=False, active=False):
         """
         Returns a list of dict for confirmed cases. It can be filtered by
-        province, last days, cumulative and whether or not it is active.
+        region, province, city, last days, cumulative and whether or not it is active.
+        If region, province and city name filters are all defined, only the region
+        will be used. If province and city are defined, only the province is used.
 
         :param region: region name
         :param province: province name
+        :param city: city name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
         :param active: if true it will extract all cases except deaths and recoveries
@@ -203,13 +206,7 @@ class DangerousCovid:
         running_sum = 0
         location_filter = None
 
-        if region is None and province is not None:
-            location_filter = 'province'
-            if province.lower() not in [p.lower() for p in self.provinces()]:
-                print(f'Province {province} is not found in database.')
-                return ret
-
-        if region is not None:  # Ignore province
+        if region is not None:
             location_filter = 'region'
             if region.lower() not in [p.lower() for p in self.regions()]:
                 print(f'Region {region} is not found in database.')
@@ -217,6 +214,17 @@ class DangerousCovid:
                 print('Here is the list:')
                 for p in self.regions():
                     print(p)
+                return ret
+        elif province is not None:
+            location_filter = 'province'
+            if province.lower() not in [p.lower() for p in self.provinces()]:
+                print(f'Province {province} is not found in database.')
+                return ret
+        elif city is not None:
+            location_filter = 'city'
+            if city.lower() not in [p.lower() for p in self.cities()]:
+                print(f'City {city} is not found in database.')
+                print('Use the cities() method to get a list of cities.')
                 return ret
 
         u_date = self.unique_date()
@@ -226,9 +234,10 @@ class DangerousCovid:
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
 
-                # Filter date, region or province and active cases
+                # Filter date, region, province, city and active cases
                 if (ud == date_conf and
                         (location_filter is None or
+                        (location_filter == 'city' and city.lower() == doh['City'].lower()) or
                         (location_filter == 'province' and province.lower() == doh['Province'].lower()) or
                         (location_filter == 'region' and region.lower() == doh['Region'].lower()))):
                     # Active cases excludes deaths and recoveries
@@ -240,6 +249,8 @@ class DangerousCovid:
 
             running_sum += cnt
             res.update({'Date': ud})
+            if location_filter == 'city':
+                res.update({'City': city})
             if location_filter == 'province':
                 res.update({'Province': province})
             if location_filter == 'region':
