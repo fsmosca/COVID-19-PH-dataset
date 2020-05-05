@@ -317,6 +317,16 @@ Region XII (SOCCSKSARGEN)
 Region XIII (Caraga)
 ```
 
+#### Example 10: # Get all data from the source database of case information and save it to a file
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+all_data = covid.data()  # a list of dict
+covid.save_to_file('mycopy.csv', all_data)
+```
+
 See sample.py in src folder for more examples.
 
 ### D. sample.py
