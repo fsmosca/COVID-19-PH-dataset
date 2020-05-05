@@ -378,6 +378,37 @@ City of Cabadbaran
 ...
 ```
 
+#### Example 13: Cumulative confirmed cases in Quezon city in the last 14 days
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print('Cumulative confirmed cases in Quezon city in the last 14 days:')
+cc = covid.cases(city='quezon city', days=14, cumulative=True)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+##### Output
+```
+Cumulative confirmed cases in Quezon city in the last 14 days:
+2020-05-04, 1367
+2020-05-03, 1351
+2020-05-02, 1341
+2020-05-01, 1340
+2020-04-30, 1326
+2020-04-29, 1308
+2020-04-28, 1280
+2020-04-27, 1245
+2020-04-26, 1217
+2020-04-25, 1199
+2020-04-24, 1183
+2020-04-23, 1167
+2020-04-22, 1147
+2020-04-21, 1138
+```
+
+
 See sample.py in src folder for more examples.
 
 ### D. sample.py
