@@ -69,19 +69,19 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
-2020-05-04, 1
-2020-05-03, 0
+2020-05-04, 3
+2020-05-03, 1
 2020-05-02, 0
 2020-05-01, 0
 2020-04-30, 1
 2020-04-29, 7
 2020-04-28, 1
-2020-04-27, 2
+2020-04-27, 3
 2020-04-26, 3
 2020-04-25, 0
 2020-04-24, 1
 2020-04-23, 2
-2020-04-22, 1
+2020-04-22, 2
 2020-04-21, 0
 ```
 
@@ -101,20 +101,20 @@ for c in cc:
 ##### Output
 ```
 Cumulative all confirmed cases at Bulacan in the last 14 days:
-2020-05-04, 124
-2020-05-03, 123
-2020-05-02, 123
-2020-05-01, 123
-2020-04-30, 123
-2020-04-29, 122
-2020-04-28, 115
-2020-04-27, 114
-2020-04-26, 112
-2020-04-25, 109
-2020-04-24, 109
-2020-04-23, 108
-2020-04-22, 106
-2020-04-21, 105
+2020-05-04, 130
+2020-05-03, 127
+2020-05-02, 126
+2020-05-01, 126
+2020-04-30, 126
+2020-04-29, 125
+2020-04-28, 118
+2020-04-27, 117
+2020-04-26, 114
+2020-04-25, 111
+2020-04-24, 111
+2020-04-23, 110
+2020-04-22, 108
+2020-04-21, 106
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -235,13 +235,13 @@ for c in cc:
 ```
 Cumulative active confirmed cases in Metro Manila or NCR in the last 7 days:
 Active means excluding deaths and recoveries.
-{'Date': '2020-05-04', 'Region': 'National Capital Region (NCR)', 'Count': 3986}
-{'Date': '2020-05-03', 'Region': 'National Capital Region (NCR)', 'Count': 3915}
-{'Date': '2020-05-02', 'Region': 'National Capital Region (NCR)', 'Count': 3870}
-{'Date': '2020-05-01', 'Region': 'National Capital Region (NCR)', 'Count': 3835}
-{'Date': '2020-04-30', 'Region': 'National Capital Region (NCR)', 'Count': 3749}
-{'Date': '2020-04-29', 'Region': 'National Capital Region (NCR)', 'Count': 3692}
-{'Date': '2020-04-28', 'Region': 'National Capital Region (NCR)', 'Count': 3536}
+{'Date': '2020-05-04', 'Region': 'National Capital Region (NCR)', 'Count': 4892}
+{'Date': '2020-05-03', 'Region': 'National Capital Region (NCR)', 'Count': 4770}
+{'Date': '2020-05-02', 'Region': 'National Capital Region (NCR)', 'Count': 4653}
+{'Date': '2020-05-01', 'Region': 'National Capital Region (NCR)', 'Count': 4604}
+{'Date': '2020-04-30', 'Region': 'National Capital Region (NCR)', 'Count': 4475}
+{'Date': '2020-04-29', 'Region': 'National Capital Region (NCR)', 'Count': 4325}
+{'Date': '2020-04-28', 'Region': 'National Capital Region (NCR)', 'Count': 4131}
 ```
 
 #### Example 8: Provinces without COVID19 cases
