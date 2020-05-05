@@ -317,7 +317,7 @@ Region XII (SOCCSKSARGEN)
 Region XIII (Caraga)
 ```
 
-#### Example 10: # Get all data from the source database of case information and save it to a file
+#### Example 10: Get all data from the source database of case information and save it to a file
 ##### Code
 ```python
 import covidphi
@@ -325,6 +325,57 @@ import covidphi
 covid = covidphi.DangerousCovid()
 all_data = covid.data()  # a list of dict
 covid.save_to_file('mycopy.csv', all_data)
+```
+
+#### Example 11: Cities with confirmed cases
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+ct = covid.cities(covid=True)
+print('Cities with confirmed cases:')
+for c in ct:
+    print(c)
+```
+
+##### Output
+```
+Cities with confirmed cases:
+Batangas City
+City of Alaminos
+City of Angeles
+City of Antipolo
+City of Bacolod
+City of Bacoor
+City of Baguio
+...
+```
+
+#### Example 12: Cities without confirmed cases
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+ct = covid.cities(covid=False)
+print('Cities without confirmed cases:')
+for c in ct:
+    print(c)
+```
+
+##### Output
+```
+Cities without confirmed cases:
+City of Bago
+City of Bayawan
+City of Baybay
+City of Bayugan
+City of Bislig
+City of Bogo
+City of Borongan
+City of Cabadbaran
+...
 ```
 
 See sample.py in src folder for more examples.
