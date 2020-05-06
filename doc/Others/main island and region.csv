@@ -1,18 +1,18 @@
-Region,Main Island
-NCR,Luzon
-CAR,Luzon
-Ilocos Region,Luzon
-Cagayan Valley,Luzon
-Central Luzon,Luzon
-Calabarzon,Luzon
-MIMAROPA,Luzon
-Bicol,Luzon
-Western Visayas,Visayas
-Central Visayas,Visayas
-Eastern Visayas,Visayas
-Zamboanga Peninsula,Mindanao
-Northern Mindanao,Mindanao
-Davao Region,Mindanao
-SOCCSKSARGEN,Mindanao
-Caraga,Mindanao
-BARMM,Mindanao
+Region,IslandGroup
+National Capital Region (NCR),Luzon
+Cordillera Administrative Region (CAR),Luzon
+Region I (Ilocos Region),Luzon
+Region II (Cagayan Valley),Luzon
+Region III (Central Luzon),Luzon
+Region IV-A (CALABARZON),Luzon
+MIMAROPA Region,Luzon
+Region V (Bicol Region),Luzon
+Region VI (Western Visayas),Visayas
+Region VII (Central Visayas),Visayas
+Region VIII (Eastern Visayas),Visayas
+Region IX (Zamboanga Peninsula),Mindanao
+Region X (Northern Mindanao),Mindanao
+Region XI (Davao Region),Mindanao
+Region XII (SOCCSKSARGEN),Mindanao
+Region XIII (Caraga),Mindanao
+Bangsamoro Autonomous Region in Muslim Mindanao (BARMM),Mindanao
