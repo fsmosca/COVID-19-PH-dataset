@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.12'
+version = 'covidphi v0.13'
 
 
 class DangerousCovid:    
@@ -410,17 +410,16 @@ class DangerousCovid:
             info = {}
             info.update({'Patient': doh['CaseCode']})
             if date:
-                date_dt = datetime.strptime(doh['DateRepConf'], '%Y-%m-%d').date()
-                info.update({'Date': str(date_dt)})
+                info.update({'Date': doh['DateRepConf']})
             if cityortown:
-                info.update({'CityOrTown': doh['CityMunRes']})
+                info.update({'CityOrTown': doh['CityOrMuni']})
             if province:
-                info.update({'Province': doh['ProvRes']})
+                info.update({'Province': doh['Province']})
             if geo:
-                address_lookup = f'{doh["CityMunRes"]}, {doh["ProvRes"]}'
+                address_lookup = f'{doh["Address"]}'
                 found = False
                 for g in geo_data:
-                    address = g['DOHCityMunProvRes']
+                    address = g['Address']
                     if address == address_lookup:
                         info.update({'Latitude': float(g['Latitude'])})
                         info.update({'Longitude': float(g['Longitude'])})
