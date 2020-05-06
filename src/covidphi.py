@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.13'
+version = 'covidphi v0.14'
 
 
 class DangerousCovid:    
@@ -180,6 +180,40 @@ class DangerousCovid:
 
         return sorted(list(set(ret)))
 
+    def municipalities(self, covid=True):
+        """
+        Returns a list of municipalities depending on the parameter covid. If covid
+        is true then municipalities with covid will be returned, otherwise municipalities
+        without covid cases will be returned. Default covid is true.
+
+        :covid: if true it will return municipalities with covid else without covid
+        :return: a list of municipalities
+        """
+        ret = []
+
+        if covid:
+            for doh in self.__data:
+                muni = doh['Municipality']
+                if muni == '':
+                    continue
+                ret.append(muni)
+        else:
+            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
+            psgc = DangerousCovid.__read_csv(psgc_file)
+            for p in psgc:
+                if p['Geographic Level'] == 'Mun':
+                    psgc_mun_name = p['Name']
+                    found = False
+                    for doh in self.__data:
+                        if doh['Municipality'].lower() == psgc_mun_name.lower():
+                            found = True
+                            break
+                    if not found:
+                        psgc_mun_name = psgc_mun_name.title()
+                        ret.append(psgc_mun_name)
+
+        return sorted(list(set(ret)))
+
     def data(self):
         """
         Returns all data in the case information database
@@ -187,7 +221,8 @@ class DangerousCovid:
         """
         return self.__data
         
-    def cases(self, region=None, province=None, city=None, days=None, cumulative=False, active=False):
+    def cases(self, region=None, province=None, city=None, municipality=None,
+              days=None, cumulative=False, active=False):
         """
         Returns a list of dict for confirmed cases. It can be filtered by
         region, province, city, last days, cumulative and whether or not it is active.
@@ -197,6 +232,7 @@ class DangerousCovid:
         :param region: region name
         :param province: province name
         :param city: city name
+        :param municipality: municipality name
         :param days: number of days from latest
         :param cumulative: a total count which includes the previous counts
         :param active: if true it will extract all cases except deaths and recoveries
@@ -226,6 +262,12 @@ class DangerousCovid:
                 print(f'City {city} is not found in database.')
                 print('Use the cities() method to get a list of cities.')
                 return ret
+        elif municipality is not None:
+            location_filter = 'municipality'
+            if municipality.lower() not in [p.lower() for p in self.municipalities()]:
+                print(f'Municipality {municipality} is not found in database.')
+                print('Use municipalities() method to get a list of municipalities.')
+                return ret
 
         u_date = self.unique_date()
 
@@ -237,6 +279,7 @@ class DangerousCovid:
                 # Filter date, region, province, city and active cases
                 if (ud == date_conf and
                         (location_filter is None or
+                        (location_filter == 'municipality' and municipality.lower() == doh['Municipality'].lower()) or
                         (location_filter == 'city' and city.lower() == doh['City'].lower()) or
                         (location_filter == 'province' and province.lower() == doh['Province'].lower()) or
                         (location_filter == 'region' and region.lower() == doh['Region'].lower()))):
@@ -249,6 +292,8 @@ class DangerousCovid:
 
             running_sum += cnt
             res.update({'Date': ud})
+            if location_filter == 'municipality':
+                res.update({'Municipality': municipality})
             if location_filter == 'city':
                 res.update({'City': city})
             if location_filter == 'province':
