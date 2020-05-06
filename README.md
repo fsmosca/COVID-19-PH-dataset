@@ -31,30 +31,85 @@ This file contains basic geographic info such as main island, region, province, 
 ### C. Python module covidphi.py
 Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)
 
-#### Example 1: Get the Philippine COVID19 daily confirmed cases in the last 7 days
+#### Example 1: Daily Confirmed cases in the last 7 days
 ##### Code
 ```python
 import covidphi
 
 covid = covidphi.DangerousCovid()
 cases = covid.cases(days=7)
-print('Confirmed cases in the last 7 days:')
+print('Daily Confirmed cases in the last 7 days:')
 for c in cases:
     print(f'{c["Date"]}, {c["Count"]}')
 ```
 ##### Output
 ```
-Confirmed cases in the last 7 days:
+Daily Confirmed cases in the last 7 days:
+2020-05-06, 320
 2020-05-05, 199
 2020-05-04, 262
 2020-05-03, 295
 2020-05-02, 156
 2020-05-01, 284
 2020-04-30, 276
-2020-04-29, 254
 ```
 
-#### Example 2: Get daily cases in Bulacan province in the last 14 days
+#### Example 1.1: Cumulative confirmed cases
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print(f'Cumulative confirmed cases:')
+cc = covid.cases(province=None, days=None, cumulative=True)
+for c in cc:
+    print(f'{c["Date"]}, {c["Count"]}')
+```
+
+##### Output
+```
+Cumulative confirmed cases:
+2020-05-06, 10004
+2020-05-05, 9684
+2020-05-04, 9485
+2020-05-03, 9223
+2020-05-02, 8928
+2020-05-01, 8772
+2020-04-30, 8488
+2020-04-29, 8212
+2020-04-28, 7958
+...
+```
+
+#### Example 1.2 Daily recoveries
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print('Daily Recoveries:')
+rec = covid.recoveries(region=None, province=None, days=None, cumulative=False)
+for r in rec:
+print(f'{r["Date"]}, {r["Count"]}')
+```
+
+##### Output
+```
+Daily Recoveries:
+2020-05-06, 98
+2020-05-05, 93
+2020-05-04, 101
+2020-05-03, 90
+2020-05-02, 40
+2020-05-01, 41
+2020-04-30, 20
+2020-04-29, 48
+2020-04-28, 43
+2020-04-27, 70
+...
+```
+
+#### Example 2: Confirmed cases at Bulacan in the last 14 days
 ##### Code
 ```python
 import covidphi
@@ -69,30 +124,30 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
-2020-05-04, 3
+2020-05-06, 1
+2020-05-05, 0
+2020-05-04, 1
 2020-05-03, 1
 2020-05-02, 0
 2020-05-01, 0
 2020-04-30, 1
 2020-04-29, 7
 2020-04-28, 1
-2020-04-27, 3
+2020-04-27, 2
 2020-04-26, 3
 2020-04-25, 0
 2020-04-24, 1
 2020-04-23, 2
-2020-04-22, 2
-2020-04-21, 0
 ```
 
-#### Example 2.1: Get Cumulative all confirmed cases at Bulacan in the last 14 days
+#### Example 2.1: Cumulative confirmed cases at Bulacan in the last 14 days
 ##### Code
 ```python
 import covidphi
 
 covid = covidphi.DangerousCovid()
 days, prov = 14, 'Bulacan'
-print(f'Cumulative all confirmed cases at {prov} in the last {days} days:')
+print(f'Cumulative confirmed cases at {prov} in the last {days} days:')
 cc = covid.cases(province=prov, days=days, cumulative=True)
 for c in cc:
     print(f'{c["Date"]}, {c["Count"]}')
@@ -100,21 +155,21 @@ for c in cc:
 
 ##### Output
 ```
-Cumulative all confirmed cases at Bulacan in the last 14 days:
-2020-05-04, 130
-2020-05-03, 127
-2020-05-02, 126
-2020-05-01, 126
-2020-04-30, 126
-2020-04-29, 125
-2020-04-28, 118
-2020-04-27, 117
-2020-04-26, 114
-2020-04-25, 111
-2020-04-24, 111
-2020-04-23, 110
-2020-04-22, 108
-2020-04-21, 106
+Cumulative confirmed cases at Bulacan in the last 14 days:
+2020-05-06, 125
+2020-05-05, 124
+2020-05-04, 124
+2020-05-03, 123
+2020-05-02, 122
+2020-05-01, 122
+2020-04-30, 122
+2020-04-29, 121
+2020-04-28, 114
+2020-04-27, 113
+2020-04-26, 111
+2020-04-25, 108
+2020-04-24, 108
+2020-04-23, 107
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -162,31 +217,6 @@ Patients info with geo location:
 {'Patient': 'C498051', 'Date': '2020-03-06', 'Latitude': 14.5864844, 'Longitude': 121.114876}
 {'Patient': 'C130591', 'Date': '2020-03-07', 'Latitude': 14.5864844, 'Longitude': 121.114876}
 {'Patient': 'C178743', 'Date': '2020-03-08', 'Latitude': 14.554729, 'Longitude': 121.0244452}
-...
-```
-
-#### Example 5: Get cumulative all confirmed cases in Philippines
-##### Code
-```python
-import covidphi
-
-covid = covidphi.DangerousCovid()
-print(f'Cumulative all confirmed cases in Philippines')
-cc = covid.cases(province=None, days=None, cumulative=True)
-for c in cc:
-    print(f'{c["Date"]}, {c["Count"]}')
-```
-
-##### Output
-```
-Cumulative all confirmed cases in Philippines
-2020-05-05, 9684
-2020-05-04, 9485
-2020-05-03, 9223
-2020-05-02, 8928
-2020-05-01, 8772
-2020-04-30, 8488
-2020-04-29, 8212
 ...
 ```
 
