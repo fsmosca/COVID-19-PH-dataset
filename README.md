@@ -27,8 +27,9 @@ This file contains basic geographic info such as island group [Luzon, Visaya, Mi
     d. Navigate to src folder and run/experiment with sample.py.  
     e. You can also place your python script in src folder.  
 
-### C. Python module covidphi.py
-Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)
+### C. Module covidphi.py
+Folder: [src](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/src)  
+This module is using the data file "DOH COVID Data Drop Case Information.csv" and "PSGC Publication Dec2019.csv" to return info based on the methods called. covid19phi class and methods info can be found [here](https://github.com/fsmosca/COVID-19-PH-dataset/blob/master/src/module_info.txt).
 
 #### Example 1: Daily Confirmed cases in the last 7 days
 ##### Code
