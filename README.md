@@ -110,6 +110,34 @@ Daily Recoveries:
 ...
 ```
 
+#### Example 1.3: Daily deaths
+##### Code
+```python
+import covidphi
+
+covid = covidphi.DangerousCovid()
+print('Daily Deaths:')
+dea = covid.deaths(region=None, province=None, days=None, cumulative=False)
+for d in dea:
+    print(f'{d["Date"]}, {d["Count"]}')
+```
+
+##### Output
+```
+Daily Deaths:
+2020-05-08, 11
+2020-05-07, 27
+2020-05-06, 21
+2020-05-05, 14
+2020-05-04, 16
+2020-05-03, 4
+2020-05-02, 24
+2020-05-01, 11
+2020-04-30, 10
+2020-04-29, 28
+...
+```
+
 #### Example 2: Confirmed cases at Bulacan in the last 14 days
 ##### Code
 ```python
