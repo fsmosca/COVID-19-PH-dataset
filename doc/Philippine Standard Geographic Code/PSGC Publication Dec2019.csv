@@ -36786,7 +36786,7 @@ Code,Name,Geographic Level,City Class,Income Classification,Urban / Rural(based 
 129804036,Tamontaka IV,Bgy,,,R,"3,741",,,
 129804037,Tamontaka V,Bgy,,,R,"1,177",,,
 130000000,National Capital Region (NCR),Reg,,,,"12,877,253",,,
-133900000,"NCR, CITY OF MANILA, FIRST DISTRICT (Not a Province)",Dist,,,,"1,780,148",Code is not unique,,
+tmp133900000,"NCR, CITY OF MANILA, FIRST DISTRICT (Not a Province)",Dist,,,,"1,780,148","Code is not unique, add tmp prefix to code",,
 133900000,CITY OF MANILA,City,HUC,Special,,"1,780,148",Code is not unique,,
 133901000,TONDO I/II,SubMun,,,,"631,363",,,
 133901001,Barangay 1,Bgy,,,U,"1,976",,,
