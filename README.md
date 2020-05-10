@@ -1,5 +1,5 @@
 # COVID-19 PH dataset
-A collection of Philippine data for COVID-19 purposes. It also includes python module to retrieve certain data such confirmed cases and others. Here is some basic [Philippine covid-19 plots](https://fsmosca.github.io/COVID-19-PH-dataset/) built with bokeh.
+A collection of Philippine data for COVID-19 purposes. It also includes python module to retrieve certain data such confirmed cases and others. Here is some basic interactive [Philippine covid-19 plots](https://fsmosca.github.io/COVID-19-PH-dataset/) built using bokeh.
 
 ![covid19 bokeh](https://i.imgur.com/2Oq2ERA.png)
 
@@ -47,13 +47,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-10, 184
 2020-05-09, 147
 2020-05-08, 120
 2020-05-07, 338
 2020-05-06, 321
 2020-05-05, 199
 2020-05-04, 262
-2020-05-03, 295
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -71,6 +71,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-10, 10794
 2020-05-09, 10610
 2020-05-08, 10463
 2020-05-07, 10343
@@ -80,7 +81,6 @@ Cumulative confirmed cases:
 2020-05-03, 9223
 2020-05-02, 8928
 2020-05-01, 8772
-2020-04-30, 8488
 ...
 ```
 
@@ -99,6 +99,7 @@ print(f'{r["Date"]}, {r["Count"]}')
 ##### Output
 ```
 Daily Recoveries:
+2020-05-10, 82
 2020-05-09, 108
 2020-05-08, 116
 2020-05-07, 112
@@ -108,7 +109,6 @@ Daily Recoveries:
 2020-05-03, 90
 2020-05-02, 40
 2020-05-01, 41
-2020-04-30, 20
 ...
 ```
 
@@ -127,6 +127,7 @@ for d in dea:
 ##### Output
 ```
 Daily Deaths:
+2020-05-10, 15
 2020-05-09, 8
 2020-05-08, 11
 2020-05-07, 27
@@ -136,7 +137,6 @@ Daily Deaths:
 2020-05-03, 4
 2020-05-02, 24
 2020-05-01, 11
-2020-04-30, 10
 ...
 ```
 
