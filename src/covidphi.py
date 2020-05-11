@@ -32,14 +32,16 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.14'
+version = 'covidphi v0.15'
 
 
 class DangerousCovid:    
     def __init__(self,
                  doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv',
-                 address_file='../doc/Others/address reference.csv'):
+                 address_file='../doc/Others/address reference.csv',
+                 psgc_file='../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'):
         self.__address_file = address_file
+        self.__psgc_file = psgc_file
         self.__data = DangerousCovid.__read_csv(doh_file, 'utf-8')
 
     @staticmethod
@@ -129,8 +131,7 @@ class DangerousCovid:
                     continue
                 ret.append(prov)
         else:
-            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
-            psgc = DangerousCovid.__read_csv(psgc_file)
+            psgc = DangerousCovid.__read_csv(self.__psgc_file)
             for p in psgc:
                 if p['Geographic Level'] == 'Prov':
                     psgc_prov_name = p['Name']
@@ -162,8 +163,7 @@ class DangerousCovid:
                     continue
                 ret.append(city)
         else:
-            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
-            psgc = DangerousCovid.__read_csv(psgc_file)
+            psgc = DangerousCovid.__read_csv(self.__psgc_file)
             for p in psgc:
                 if p['Geographic Level'] == 'City':
                     psgc_city_name = p['Name']
@@ -198,8 +198,7 @@ class DangerousCovid:
                     continue
                 ret.append(muni)
         else:
-            psgc_file = '../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv'
-            psgc = DangerousCovid.__read_csv(psgc_file)
+            psgc = DangerousCovid.__read_csv(self.__psgc_file)
             for p in psgc:
                 if p['Geographic Level'] == 'Mun':
                     psgc_mun_name = p['Name']
