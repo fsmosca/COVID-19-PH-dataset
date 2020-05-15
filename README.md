@@ -47,13 +47,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-14, 258
+2020-05-13, 268
+2020-05-12, 264
+2020-05-11, 292
 2020-05-10, 184
 2020-05-09, 147
 2020-05-08, 120
-2020-05-07, 338
-2020-05-06, 321
-2020-05-05, 199
-2020-05-04, 262
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -71,16 +71,16 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-14, 11876
+2020-05-13, 11618
+2020-05-12, 11350
+2020-05-11, 11086
 2020-05-10, 10794
 2020-05-09, 10610
 2020-05-08, 10463
 2020-05-07, 10343
 2020-05-06, 10005
 2020-05-05, 9684
-2020-05-04, 9485
-2020-05-03, 9223
-2020-05-02, 8928
-2020-05-01, 8772
 ...
 ```
 
@@ -99,16 +99,16 @@ print(f'{r["Date"]}, {r["Count"]}')
 ##### Output
 ```
 Daily Recoveries:
+2020-05-14, 86
+2020-05-13, 145
+2020-05-12, 107
+2020-05-11, 75
 2020-05-10, 82
 2020-05-09, 108
 2020-05-08, 116
 2020-05-07, 112
 2020-05-06, 98
 2020-05-05, 93
-2020-05-04, 101
-2020-05-03, 90
-2020-05-02, 40
-2020-05-01, 41
 ...
 ```
 
@@ -127,16 +127,16 @@ for d in dea:
 ##### Output
 ```
 Daily Deaths:
+2020-05-14, 18
+2020-05-13, 21
+2020-05-12, 25
+2020-05-11, 7
 2020-05-10, 15
 2020-05-09, 8
 2020-05-08, 11
 2020-05-07, 27
 2020-05-06, 21
 2020-05-05, 14
-2020-05-04, 16
-2020-05-03, 4
-2020-05-02, 24
-2020-05-01, 11
 ...
 ```
 
@@ -155,6 +155,11 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
+2020-05-14, 3
+2020-05-13, 0
+2020-05-12, 1
+2020-05-11, 4
+2020-05-10, 1
 2020-05-09, 1
 2020-05-08, 0
 2020-05-07, 2
@@ -164,11 +169,6 @@ Confirmed cases at Bulacan in the last 14 days:
 2020-05-03, 2
 2020-05-02, 0
 2020-05-01, 0
-2020-04-30, 1
-2020-04-29, 7
-2020-04-28, 1
-2020-04-27, 3
-2020-04-26, 3
 ```
 
 #### Example 2.1: Cumulative confirmed cases at Bulacan in the last 14 days
@@ -187,20 +187,20 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases at Bulacan in the last 14 days:
-2020-05-09, 134
-2020-05-08, 133
-2020-05-07, 133
-2020-05-06, 131
-2020-05-05, 130
-2020-05-04, 130
-2020-05-03, 127
-2020-05-02, 125
-2020-05-01, 125
-2020-04-30, 125
-2020-04-29, 124
-2020-04-28, 117
-2020-04-27, 116
-2020-04-26, 113
+2020-05-14, 145
+2020-05-13, 142
+2020-05-12, 142
+2020-05-11, 141
+2020-05-10, 137
+2020-05-09, 136
+2020-05-08, 135
+2020-05-07, 135
+2020-05-06, 133
+2020-05-05, 132
+2020-05-04, 132
+2020-05-03, 129
+2020-05-02, 127
+2020-05-01, 127
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -311,22 +311,21 @@ Active means excluding deaths and recoveries.
 import covidphi
 
 covid = covidphi.DangerousCovid()
-print('Provinces without COVID19 cases:')
+date_today = datetime.today().strftime('%Y-%m-%d')
+print(f'Provinces without COVID19 cases as of {date_today}:')
 for p in covid.provinces(covid=False):
     print(p)
 ```
 
 ##### Output
 ```
-Provinces without COVID19 cases:
+Provinces without COVID19 cases as of 2020-05-14:
 Agusan Del Sur
 Apayao
 Aurora
 Basilan
 Batanes
 Biliran
-Camarines Norte
-Davao Occidental
 Dinagat Islands
 Eastern Samar
 Kalinga
