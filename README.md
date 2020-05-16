@@ -47,13 +47,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-15, 215
 2020-05-14, 258
 2020-05-13, 268
 2020-05-12, 264
 2020-05-11, 292
 2020-05-10, 184
 2020-05-09, 147
-2020-05-08, 120
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -71,6 +71,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-15, 12091
 2020-05-14, 11876
 2020-05-13, 11618
 2020-05-12, 11350
@@ -80,7 +81,6 @@ Cumulative confirmed cases:
 2020-05-08, 10463
 2020-05-07, 10343
 2020-05-06, 10005
-2020-05-05, 9684
 ...
 ```
 
@@ -99,6 +99,7 @@ print(f'{r["Date"]}, {r["Count"]}')
 ##### Output
 ```
 Daily Recoveries:
+2020-05-15, 123
 2020-05-14, 86
 2020-05-13, 145
 2020-05-12, 107
@@ -108,7 +109,6 @@ Daily Recoveries:
 2020-05-08, 116
 2020-05-07, 112
 2020-05-06, 98
-2020-05-05, 93
 ...
 ```
 
@@ -127,6 +127,7 @@ for d in dea:
 ##### Output
 ```
 Daily Deaths:
+2020-05-15, 16
 2020-05-14, 18
 2020-05-13, 21
 2020-05-12, 25
@@ -136,7 +137,6 @@ Daily Deaths:
 2020-05-08, 11
 2020-05-07, 27
 2020-05-06, 21
-2020-05-05, 14
 ...
 ```
 
@@ -155,6 +155,7 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
+2020-05-15, 2
 2020-05-14, 3
 2020-05-13, 0
 2020-05-12, 1
@@ -168,7 +169,6 @@ Confirmed cases at Bulacan in the last 14 days:
 2020-05-04, 3
 2020-05-03, 2
 2020-05-02, 0
-2020-05-01, 0
 ```
 
 #### Example 2.1: Cumulative confirmed cases at Bulacan in the last 14 days
@@ -187,6 +187,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases at Bulacan in the last 14 days:
+2020-05-15, 147
 2020-05-14, 145
 2020-05-13, 142
 2020-05-12, 142
@@ -200,7 +201,6 @@ Cumulative confirmed cases at Bulacan in the last 14 days:
 2020-05-04, 132
 2020-05-03, 129
 2020-05-02, 127
-2020-05-01, 127
 ```
 
 #### Example 3: Cumulative deaths in Philippines
