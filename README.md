@@ -47,13 +47,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-17, 208
 2020-05-16, 214
 2020-05-15, 215
 2020-05-14, 258
 2020-05-13, 268
 2020-05-12, 264
 2020-05-11, 292
-2020-05-10, 184
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -71,6 +71,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-17, 12513
 2020-05-16, 12305
 2020-05-15, 12091
 2020-05-14, 11876
@@ -80,7 +81,6 @@ Cumulative confirmed cases:
 2020-05-10, 10794
 2020-05-09, 10610
 2020-05-08, 10463
-2020-05-07, 10343
 ...
 ```
 
