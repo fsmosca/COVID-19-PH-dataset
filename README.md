@@ -1,7 +1,14 @@
 # COVID-19 PH dataset
 A collection of Philippine data for COVID-19 purposes. It also includes python module to retrieve certain data such as confirmed cases and others. Here is some basic interactive [Philippine covid-19 plots](https://fsmosca.github.io/COVID-19-PH-dataset/) built using bokeh.
 
-![covid19 bokeh](https://i.imgur.com/YX37fr6.png)
+#### Cases Recoveries and Deaths
+![covid19 bokeh cases](https://i.imgur.com/RaaAPtH.png)
+
+#### Provinces and Metro Manila total cases, Cities and Municipalities daily cases in the last 14 days
+![covid19 bokeh cities](https://i.imgur.com/eUcOvNV.png)
+
+#### No. of days doubling of cases history in the last 30 days
+![covid19 bokeh doubling](https://i.imgur.com/GdSMfU4.png)
 
 ### A. Data
 #### 1. "DOH COVID Data Drop Case Information.csv"
