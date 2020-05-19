@@ -13,7 +13,7 @@ A collection of Philippine data for COVID-19 purposes. It also includes python m
 ### A. Data
 #### 1. "DOH COVID Data Drop Case Information.csv"
 Folder: [doc\Department of Health](https://github.com/fsmosca/COVID-19-PH-dataset/tree/master/doc/Department%20of%20Health)  
-This file contains confirmed cases based from "DOH COVID Data Drop - 05 Case Information.csv" file. There are added columns in this file for covidphi module purposes. More DOH data can be found at this google [page](https://drive.google.com/drive/folders/10VkiUA8x7TS2jkibhSZK1gmWxFM-EoZP)  
+This file contains confirmed cases based from "DOH COVID Data Drop_ yyyymmdd - 04 Case Information.csv" file. There are added columns in this file for covidphi module purposes. More DOH data can be found at this google [page](https://drive.google.com/drive/folders/10VkiUA8x7TS2jkibhSZK1gmWxFM-EoZP). There is an image that needs to be opened to get the link to the readme file where the link to the excel and csv files is written.  
 DOH address: https://www.doh.gov.ph/
 
 #### 2. "PSGC Publication Dec2019.csv"
