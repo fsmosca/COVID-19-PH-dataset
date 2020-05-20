@@ -100,7 +100,7 @@ covid = covidphi.DangerousCovid()
 print('Daily Recoveries:')
 rec = covid.recoveries(region=None, province=None, days=None, cumulative=False)
 for r in rec:
-print(f'{r["Date"]}, {r["Count"]}')
+    print(f'{r["Date"]}, {r["Count"]}')
 ```
 
 ##### Output
