@@ -54,13 +54,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-19, 224
 2020-05-18, 205
 2020-05-17, 208
 2020-05-16, 214
 2020-05-15, 215
 2020-05-14, 258
 2020-05-13, 268
-2020-05-12, 264
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -78,6 +78,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-19, 12942
 2020-05-18, 12718
 2020-05-17, 12513
 2020-05-16, 12305
@@ -87,7 +88,6 @@ Cumulative confirmed cases:
 2020-05-12, 11350
 2020-05-11, 11086
 2020-05-10, 10794
-2020-05-09, 10610
 ...
 ```
 
@@ -106,6 +106,7 @@ print(f'{r["Date"]}, {r["Count"]}')
 ##### Output
 ```
 Daily Recoveries:
+2020-05-19, 114
 2020-05-18, 94
 2020-05-17, 74
 2020-05-16, 101
@@ -115,7 +116,6 @@ Daily Recoveries:
 2020-05-12, 107
 2020-05-11, 75
 2020-05-10, 82
-2020-05-09, 108
 ...
 ```
 
@@ -162,6 +162,7 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
+2020-05-19, 4
 2020-05-18, 0
 2020-05-17, 1
 2020-05-16, 2
@@ -175,7 +176,6 @@ Confirmed cases at Bulacan in the last 14 days:
 2020-05-08, 0
 2020-05-07, 2
 2020-05-06, 1
-2020-05-05, 0
 ```
 
 #### Example 2.1: Cumulative confirmed cases at Bulacan in the last 14 days
@@ -194,6 +194,7 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases at Bulacan in the last 14 days:
+2020-05-19, 155
 2020-05-18, 151
 2020-05-17, 151
 2020-05-16, 150
@@ -207,7 +208,6 @@ Cumulative confirmed cases at Bulacan in the last 14 days:
 2020-05-08, 136
 2020-05-07, 136
 2020-05-06, 134
-2020-05-05, 133
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -326,10 +326,9 @@ for p in covid.provinces(covid=False):
 
 ##### Output
 ```
-Provinces without COVID19 cases as of 2020-05-19:
+Provinces without COVID19 cases as of 2020-05-20:
 Agusan Del Sur
 Apayao
-Aurora
 Basilan
 Batanes
 Biliran
@@ -339,9 +338,7 @@ Kalinga
 Masbate
 Mountain Province
 Quirino
-Sarangani
 Siquijor
-Sorsogon
 Southern Leyte
 Surigao Del Norte
 Surigao Del Sur
