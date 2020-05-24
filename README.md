@@ -54,13 +54,13 @@ for c in cases:
 ##### Output
 ```
 Daily Confirmed cases in the last 7 days:
+2020-05-24, 258
+2020-05-23, 180
+2020-05-22, 163
 2020-05-21, 213
 2020-05-20, 279
 2020-05-19, 224
 2020-05-18, 205
-2020-05-17, 208
-2020-05-16, 214
-2020-05-15, 215
 ```
 
 #### Example 1.1: Cumulative confirmed cases
@@ -78,16 +78,13 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases:
+2020-05-24, 14035
+2020-05-23, 13777
+2020-05-22, 13597
 2020-05-21, 13434
 2020-05-20, 13221
 2020-05-19, 12942
 2020-05-18, 12718
-2020-05-17, 12513
-2020-05-16, 12305
-2020-05-15, 12091
-2020-05-14, 11876
-2020-05-13, 11618
-2020-05-12, 11350
 ...
 ```
 
@@ -106,16 +103,13 @@ for r in rec:
 ##### Output
 ```
 Daily Recoveries:
+2020-05-24, 72
+2020-05-23, 85
+2020-05-22, 92
 2020-05-21, 68
 2020-05-20, 89
 2020-05-19, 114
 2020-05-18, 94
-2020-05-17, 74
-2020-05-16, 101
-2020-05-15, 123
-2020-05-14, 86
-2020-05-13, 145
-2020-05-12, 107
 ...
 ```
 
@@ -134,16 +128,13 @@ for d in dea:
 ##### Output
 ```
 Daily Deaths:
+2020-05-24, 5
+2020-05-23, 6
+2020-05-22, 11
+2020-05-21, 4
+2020-05-20, 5
+2020-05-19, 6
 2020-05-18, 7
-2020-05-17, 7
-2020-05-16, 11
-2020-05-15, 16
-2020-05-14, 18
-2020-05-13, 21
-2020-05-12, 25
-2020-05-11, 7
-2020-05-10, 15
-2020-05-09, 8
 ...
 ```
 
@@ -162,6 +153,11 @@ for c in cc:
 ##### Output
 ```
 Confirmed cases at Bulacan in the last 14 days:
+2020-05-24, 2
+2020-05-23, 3
+2020-05-22, 0
+2020-05-21, 0
+2020-05-20, 1
 2020-05-19, 4
 2020-05-18, 0
 2020-05-17, 1
@@ -171,11 +167,6 @@ Confirmed cases at Bulacan in the last 14 days:
 2020-05-13, 0
 2020-05-12, 1
 2020-05-11, 4
-2020-05-10, 1
-2020-05-09, 1
-2020-05-08, 0
-2020-05-07, 2
-2020-05-06, 1
 ```
 
 #### Example 2.1: Cumulative confirmed cases at Bulacan in the last 14 days
@@ -194,6 +185,11 @@ for c in cc:
 ##### Output
 ```
 Cumulative confirmed cases at Bulacan in the last 14 days:
+2020-05-24, 161
+2020-05-23, 159
+2020-05-22, 156
+2020-05-21, 156
+2020-05-20, 156
 2020-05-19, 155
 2020-05-18, 151
 2020-05-17, 151
@@ -203,11 +199,6 @@ Cumulative confirmed cases at Bulacan in the last 14 days:
 2020-05-13, 143
 2020-05-12, 143
 2020-05-11, 142
-2020-05-10, 138
-2020-05-09, 137
-2020-05-08, 136
-2020-05-07, 136
-2020-05-06, 134
 ```
 
 #### Example 3: Cumulative deaths in Philippines
@@ -329,6 +320,7 @@ for p in covid.provinces(covid=False):
 Provinces without COVID19 cases as of 2020-05-20:
 Agusan Del Sur
 Apayao
+Aurora
 Basilan
 Batanes
 Biliran
@@ -340,7 +332,6 @@ Mountain Province
 Quirino
 Siquijor
 Southern Leyte
-Surigao Del Norte
 Surigao Del Sur
 Tawi-Tawi
 Zamboanga Del Norte
