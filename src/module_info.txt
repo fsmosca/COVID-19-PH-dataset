@@ -34,12 +34,10 @@ CLASSES
         DangerousCovid
 
     class DangerousCovid(builtins.object)
-     |  DangerousCovid(doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv')
-     |
+     |  DangerousCovid(doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv', psgc_file='../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv')     |
      |  Methods defined here:
      |
-     |  __init__(self, doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv')
-     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  __init__(self, doh_file='../doc/Department of Health/DOH COVID Data Drop Case Information.csv', address_file='../doc/Others/address reference.csv', psgc_file='../doc/Philippine Standard Geographic Code/PSGC Publication Dec2019.csv')     |      Initialize self.  See help(type(self)) for accurate signature.
      |
      |  cases(self, region=None, province=None, city=None, municipality=None, days=None, cumulative=False, active=False)     |      Returns a list of dict for confirmed cases. It can be filtered by
      |      region, province, city, last days, cumulative and whether or not it is active.
@@ -111,12 +109,30 @@ CLASSES
      |
      |      :return: a list of regions
      |
+     |  repatriate(self, cumulative=False)
+     |      Returns a list of dict of confirmed cases that has repatriate
+     |      value in DOH RegionRes column. These patients are sent back to
+     |      their home country.
+     |
+     |      :param cumulative: If true, cumulative sum from daily results will
+     |      be returned otherwise daily result count will be returned.
+     |      :return: A list of dict [{'Date': '2020-05-20', 'Count': 24}, {..} ..]
+     |
      |  unique_date(self, header='DateRepConf')
      |      When calculating confirmed cases, use the DateRepConf column. For
      |      recoveries use the DateRepRem. For deaths use DateRepRem too.
      |
      |      :header: name of column with dates to use, default is confirmed date
      |      :return: a list of unique string date ordered in ascending order
+     |
+     |  validation(self, cumulative=False)
+     |      Returns a list of dict of confirmed cases that are still for
+     |      validation. This is an entry in DOH RegionRes column where
+     |      the value is empty.
+     |
+     |      :param cumulative: If true, cumulative sum from daily results will
+     |      be returned otherwise daily result count will be returned.
+     |      :return: A list of dict [{'Date': '2020-05-20', 'Count': 24}, {..} ..]
      |
      |  ----------------------------------------------------------------------
      |  Static methods defined here:
@@ -138,4 +154,4 @@ CLASSES
      |      list of weak references to the object (if defined)
 
 DATA
-    version = 'covidphi v0.14'
+    version = 'covidphi v0.16'
