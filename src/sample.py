@@ -101,6 +101,18 @@ def main():
     for p in info.provinces(covid=False):
         print(p)
 
+    # (15) Daily confirmed cases for validation
+    cases = covid.validation(cumulative=False)
+    print('Daily confirmed cases for validation:')
+    for c in cases:
+        print(f'{c["Date"]}, {c["Count"]}')
+
+    # (16) Cumulative confirmed cases repatriated
+    cases = covid.repatriate(cumulative=True)
+    print('Cumulative confirmed cases repatraited:')
+    for c in cases:
+        print(f'{c["Date"]}, {c["Count"]}')
+
 
 if __name__ == '__main__':
     main()
