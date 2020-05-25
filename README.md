@@ -1,5 +1,5 @@
 # COVID-19 PH dataset
-A collection of Philippine data for COVID-19 purposes. It also includes python module to retrieve certain data such as confirmed cases and others. Here is some basic interactive [Philippine covid-19 plots](https://fsmosca.github.io/COVID-19-PH-dataset/) built using bokeh.
+A collection of Philippine data for COVID-19 purposes. It also includes python module to retrieve certain data such as confirmed cases and others. Here is some basic interactive [Philippine covid-19 plots](https://fsmosca.github.io/COVID-19-PH-dataset/) built using bokeh. There is also a [racing bar chart for confirmed cases](https://public.flourish.studio/visualisation/2550086/) on provinces and Metro Manila cities and town.
 
 #### Cases Recoveries and Deaths
 ![covid19 bokeh cases](https://i.imgur.com/e3YabOI.png)
@@ -477,3 +477,5 @@ https://www.doh.gov.ph/
 https://psa.gov.ph/classification/psgc/
 * Bokeh  
 https://bokeh.org/
+* Flourish Studio  
+https://flourish.studio/
