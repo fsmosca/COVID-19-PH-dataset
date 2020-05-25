@@ -37,6 +37,7 @@ Luzon,National Capital Region (NCR),,City of Valenzuela,City of Valenzuela,,"Cit
 Luzon,Region IV-A (CALABARZON),Rizal,Binangonan,,Binangonan,"Binangonan, Rizal, Philippines",14.4765477,121.195743
 Luzon,Region IV-A (CALABARZON),Cavite,City of Imus,City of Imus,,"City of Imus, Cavite, Philippines",14.4064221,120.9405057
 Luzon,Region IV-A (CALABARZON),Rizal,San Mateo,,San Mateo,"San Mateo, Rizal, Philippines",14.6958933,121.1216992
+Visayas,Region VII (Central Visayas),Cebu,Minglanilla,,Minglanilla,"Minglanilla, Cebu, Philippines",10.2433023,123.7889922
 Luzon,National Capital Region (NCR),,City of Manila,City of Manila,,"Paco, City of Manila, Metro Manila, Philippines",14.5854543,120.9938545
 Luzon,Region IV-A (CALABARZON),Rizal,City of Antipolo,City of Antipolo,,"City of Antipolo, Rizal, Philippines",14.6254827,121.1244847
 Luzon,National Capital Region (NCR),,City of Manila,City of Manila,,"Tondo I/II, City of Manila, Philippines",14.6205653,120.9659671
@@ -102,7 +103,6 @@ Luzon,Region III (Central Luzon),Nueva Ecija,Santa Rosa,,Santa Rosa,"Santa Rosa,
 Mindanao,Region XI (Davao Region),Davao del Norte,City of Tagum,City of Tagum,,"City of Tagum, Davao del Norte, Philippines",7.447173299999999,125.8093465
 Luzon,Region IV-A (CALABARZON),Batangas,Nasugbu,,Nasugbu,"Nasugbu, Batangas, Philippines",14.0940383,120.6890055
 Visayas,Region VIII (Eastern Visayas),Samar,Tarangnan,,Tarangnan,"Tarangnan, Samar, Philippines",11.9181321,124.7887384
-Luzon,National Capital Region (NCR),,Santa Ana,,Santa Ana,"Santa Ana, , Philippines",18.4816082,122.1556749
 Mindanao,Region XII (SOCCSKSARGEN),Sarangani,Maitum,,Maitum,"Maitum, Sarangani, Philippines",6.124080800000001,124.4863567
 Visayas,Region VI (Western Visayas),Negros Occidental,Enrique B. Magalona (Saravia),,Enrique B. Magalona (Saravia),"Enrique B. Magalona (Saravia), Negros Occidental, Philippines",10.8891201,123.0113568
 Luzon,Cordillera Administrative Region (CAR),Benguet,La Trinidad,,La Trinidad,"La Trinidad, Benguet, Philippines",16.4774284,120.5854674
@@ -116,6 +116,7 @@ Luzon,Region IV-A (CALABARZON),Quezon,Atimonan,,Atimonan,"Atimonan, Quezon, Phil
 Luzon,Region III (Central Luzon),Nueva Ecija,Quezon,,Quezon,"Quezon, Nueva Ecija, Philippines",15.569531,120.8269231
 Visayas,Region VII (Central Visayas),Cebu,City of Toledo,City of Toledo,,"City of Toledo, Cebu, Philippines",10.3870103,123.6502788
 Visayas,Region VI (Western Visayas),Negros Occidental,City of Silay,City of Silay,,"City of Silay, Negros Occidental, Philippines",10.7528182,123.0875623
+Luzon,Region IV-A (CALABARZON),Laguna,Paete,,Paete,"Paete, Laguna, Philippines",14.367518,121.5299539
 Luzon,Region III (Central Luzon),Pampanga,Santo Tomas,,Santo Tomas,"Santo Tomas, Pampanga, Philippines",15.0086826,120.7104793
 Luzon,Region IV-A (CALABARZON),Laguna,Liliw,,Liliw,"Liliw, Laguna, Philippines",14.1364476,121.4399041
 Luzon,Region IV-A (CALABARZON),Cavite,Noveleta,,Noveleta,"Noveleta, Cavite, Philippines",14.4278929,120.8801182
@@ -204,7 +205,6 @@ Luzon,Region IV-A (CALABARZON),Cavite,Indang,,Indang,"Indang, Cavite, Philippine
 Luzon,Region I (Ilocos Region),Pangasinan,Bayambang,,Bayambang,"Bayambang, Pangasinan, Philippines",15.8007665,120.4127161
 Luzon,Region III (Central Luzon),Bataan,Dinalupihan,,Dinalupihan,"Dinalupihan, Bataan, Philippines",14.8780629,120.4545801
 Mindanao,Region XI (Davao Region),Davao Oriental,City of Mati,City of Mati,,"City of Mati, Davao Oriental, Philippines",6.9521675,126.2173124
-Visayas,Region VII (Central Visayas),Cebu,Minglanilla,,Minglanilla,"Minglanilla, Cebu, Philippines",10.2433023,123.7889922
 Luzon,Region IV-A (CALABARZON),Rizal,Cardona,,Cardona,"Cardona, Rizal, Philippines",14.3619051,121.2340199
 Mindanao,Bangsamoro Autonomous Region in Muslim Mindanao (BARMM),Lanao del Sur,Marantao,,Marantao,"Marantao, Lanao del Sur, Philippines",7.9653062,124.1865669
 Luzon,Region IV-A (CALABARZON),Laguna,Lumban,,Lumban,"Lumban, Laguna, Philippines",14.2956294,121.4961581
@@ -228,7 +228,6 @@ Luzon,Region IV-A (CALABARZON),Quezon,Real,,Real,"Real, Quezon, Philippines",14.
 Luzon,Region V (Bicol Region),Albay,Guinobatan,,Guinobatan,"Guinobatan, Albay, Philippines",13.1541858,123.5504076
 Luzon,Region III (Central Luzon),Bulacan,Pandi,,Pandi,"Pandi, Bulacan, Philippines",14.8756999,120.9592956
 Luzon,National Capital Region (NCR),,City of Manila,City of Manila,,"Intramuros, City of Manila, Metro Manila, Philippines",14.5895972,120.9747258
-Luzon,National Capital Region (NCR),,Sampaloc,,Sampaloc,"Sampaloc, , Philippines",14.61103,120.9962356
 Luzon,Region III (Central Luzon),Nueva Ecija,Licab,,Licab,"Licab, Nueva Ecija, Philippines",15.5470573,120.769476
 Visayas,Region VI (Western Visayas),Antique,Hamtic,,Hamtic,"Hamtic, Antique, Philippines",10.6518851,122.0155491
 Luzon,Region III (Central Luzon),Pampanga,Mexico,,Mexico,"Mexico, Pampanga, Philippines",15.0645928,120.7202967
@@ -274,9 +273,9 @@ Visayas,Region VII (Central Visayas),Cebu,Consolacion,,Consolacion,"Consolacion,
 Luzon,Region V (Bicol Region),Albay,City of Ligao,City of Ligao,,"City of Ligao, Albay, Philippines",13.1724166,123.4943968
 Visayas,Region VII (Central Visayas),Cebu,Danao City,Danao City,,"Danao City, Cebu, Philippines",10.5417498,123.9527031
 Luzon,Region IV-A (CALABARZON),Quezon,Sampaloc,,Sampaloc,"Sampaloc, Quezon, Philippines",14.1774396,121.6169002
+Visayas,Region VII (Central Visayas),,Consolacion,,Consolacion,"Consolacion, , Philippines",10.4367842,123.9415518
 Mindanao,Region X (Northern Mindanao),Camiguin,Mahinog,,Mahinog,"Mahinog, Camiguin, Philippines",9.1601852,124.7630307
 Mindanao,Region XI (Davao Region),Davao Occidental,Malita,,Malita,"Malita, Davao Occidental, Philippines",6.384302300000001,125.5815927
-Luzon,Region IV-A (CALABARZON),Laguna,Paete,,Paete,"Paete, Laguna, Philippines",14.367518,121.5299539
 Mindanao,Region X (Northern Mindanao),Lanao del Norte,Tubod,,Tubod,"Tubod, Lanao del Norte, Philippines",7.9942672,123.8746152
 Luzon,MIMAROPA Region,Oriental Mindoro,Puerto Galera,,Puerto Galera,"Puerto Galera, Oriental Mindoro, Philippines",13.5018907,120.95412
 Mindanao,Region XI (Davao Region),Davao de Oro,Pantukan,,Pantukan,"Pantukan, Davao de Oro, Philippines",7.255221700000001,126.1562026
@@ -321,7 +320,6 @@ Luzon,Region I (Ilocos Region),La Union,Santo Tomas,,Santo Tomas,"Santo Tomas, L
 Luzon,Region I (Ilocos Region),La Union,Bacnotan,,Bacnotan,"Bacnotan, La Union, Philippines",16.7339713,120.3666099
 Luzon,Region III (Central Luzon),Nueva Ecija,General Mamerto Natividad,,General Mamerto Natividad,"General Mamerto Natividad, Nueva Ecija, Philippines",15.5878761,121.0449768
 Luzon,Region V (Bicol Region),Sorsogon,Matnog,,Matnog,"Matnog, Sorsogon, Philippines",12.6077499,124.0577755
-Luzon,National Capital Region (NCR),,Santa Cruz,,Santa Cruz,"Santa Cruz, , Philippines",14.2691095,121.4113308
 Luzon,Region III (Central Luzon),Nueva Ecija,Jaen,,Jaen,"Jaen, Nueva Ecija, Philippines",15.3627393,120.8838016
 Luzon,Region III (Central Luzon),Bataan,Hermosa,,Hermosa,"Hermosa, Bataan, Philippines",14.8269095,120.4242401
 Luzon,Region II (Cagayan Valley),Isabela,Echague,,Echague,"Echague, Isabela, Philippines",16.6701364,121.7171058
@@ -341,9 +339,12 @@ Mindanao,Region XII (SOCCSKSARGEN),Cotabato,Midsayap,,Midsayap,"Midsayap, Cotaba
 Luzon,Region II (Cagayan Valley),Isabela,City of Cauayan,City of Cauayan,,"City of Cauayan, Isabela, Philippines",16.9166244,121.7879244
 Mindanao,Region XIII (Caraga),Surigao del Norte,City of Surigao,City of Surigao,,"City of Surigao, Surigao del Norte, Philippines",9.7571312,125.5137674
 Luzon,Region II (Cagayan Valley),Isabela,San Agustin,,San Agustin,"San Agustin, Isabela, Philippines",16.4915291,121.8334868
+Visayas,Region VII (Central Visayas),,City of Lapu-Lapu,City of Lapu-Lapu,,"City of Lapu-Lapu, Philippines",10.2661822,123.997295
 Luzon,Region III (Central Luzon),Zambales,Candelaria,,Candelaria,"Candelaria, Zambales, Philippines",15.63998,120.0896313
 Visayas,Region VII (Central Visayas),Cebu,Cordova,,Cordova,"Cordova, Cebu, Philippines",10.2438638,123.9415518
+Luzon,Region IV-A (CALABARZON),Quezon,Perez,,Perez,"Perez, Quezon, Philippines",14.1681457,121.958687
 Luzon,Region IV-A (CALABARZON),Batangas,Rosario,,Rosario,"Rosario, Batangas, Philippines",13.8162016,121.2740813
+Visayas,Region VII (Central Visayas),Cebu,Carmen,,Carmen,"Carmen, Cebu, Philippines",10.5937044,124.0186256
 Luzon,Region IV-A (CALABARZON),Batangas,Ibaan,,Ibaan,"Ibaan, Batangas, Philippines",13.822048,121.1340569
 Luzon,Region III (Central Luzon),Pampanga,Apalit,,Apalit,"Apalit, Pampanga, Philippines",14.9494418,120.7588402
 Mindanao,Region X (Northern Mindanao),Bukidnon,City of Valencia,City of Valencia,,"City of Valencia, Bukidnon, Philippines",7.8631903,125.1708741
@@ -405,7 +406,6 @@ Luzon,Region II (Cagayan Valley),Nueva Vizcaya,Bayombong,,Bayombong,"Bayombong, 
 Luzon,MIMAROPA Region,Romblon,San Jose,,San Jose,"San Jose, Romblon, Philippines",12.0634383,121.9558431
 Luzon,Region IV-A (CALABARZON),Laguna,Santa Maria,,Santa Maria,"Santa Maria, Laguna, Philippines",14.5128779,121.43419
 Luzon,Region I (Ilocos Region),La Union,Burgos,,Burgos,"Burgos, La Union, Philippines",16.5380324,120.4703258
-Luzon,National Capital Region (NCR),,San Nicolas,,San Nicolas,"San Nicolas, , Philippines",18.1470823,120.5854674
 Luzon,Region II (Cagayan Valley),Cagayan,Baggao,,Baggao,"Baggao, Cagayan, Philippines",17.8814458,121.8725374
 Luzon,Region III (Central Luzon),Bulacan,Plaridel,,Plaridel,"Plaridel, Bulacan, Philippines",14.8767548,120.8936002
 Mindanao,Region XII (SOCCSKSARGEN),Sultan Kudarat,Lambayong (Mariano Marcos),,Lambayong (Mariano Marcos),"Lambayong (Mariano Marcos), Sultan Kudarat, Philippines",6.7987867,124.6192702
@@ -414,7 +414,6 @@ Luzon,Region I (Ilocos Region),La Union,Naguilian,,Naguilian,"Naguilian, La Unio
 Luzon,Region I (Ilocos Region),Pangasinan,Basista,,Basista,"Basista, Pangasinan, Philippines",15.8716297,120.3954282
 Visayas,Region VI (Western Visayas),Antique,Laua-An,,Laua-An,"Laua-An, Antique, Philippines",11.1637611,122.1178261
 Luzon,Region IV-A (CALABARZON),Batangas,Padre Garcia,,Padre Garcia,"Padre Garcia, Batangas, Philippines",13.8776626,121.244445
-Luzon,Region IV-A (CALABARZON),Batangas,City of Lucena,City of Lucena,,"City of Lucena, Batangas, Philippines",13.9413957,121.6234471
 Luzon,Region III (Central Luzon),Zambales,San Antonio,,San Antonio,"San Antonio, Zambales, Philippines",14.9275093,120.0896313
 Luzon,Region I (Ilocos Region),La Union,Balaoan,,Balaoan,"Balaoan, La Union, Philippines",16.8022485,120.4011911
 Visayas,Region VI (Western Visayas),Guimaras,Buenavista,,Buenavista,"Buenavista, Guimaras, Philippines",10.6967157,122.650351
