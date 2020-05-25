@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.15'
+version = 'covidphi v0.16'
 
 
 class DangerousCovid:    
@@ -219,7 +219,69 @@ class DangerousCovid:
         :return: a list of dict, where the key in dict is the header
         """
         return self.__data
-        
+
+    def repatriate(self, cumulative=False):
+        """
+        Returns a list of dict of confirmed cases that has repatriate
+        value in DOH RegionRes column. These patients are sent back to
+        their home country.
+
+        :param cumulative: If true, cumulative sum from daily results will
+        be returned otherwise daily result count will be returned.
+        :return: A list of dict [{'Date': '2020-05-20', 'Count': 24}, {..} ..]
+        """
+        ret = []
+        running_sum = 0
+
+        u_date = self.unique_date()
+
+        for i, ud in enumerate(u_date):
+            res, cnt = {}, 0
+            for doh in self.__data:
+                date_conf = doh['DateRepConf']
+                if ud == date_conf and doh['RegionRes'].lower() == 'repatriate':
+                    cnt += 1
+
+            running_sum += cnt
+            res.update({'Date': ud})
+            res.update({'Count': running_sum if cumulative else cnt})
+            ret.append(res)
+
+        ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
+
+        return ret
+
+    def validation(self, cumulative=False):
+        """
+        Returns a list of dict of confirmed cases that are still for
+        validation. This is an entry in DOH RegionRes column where
+        the value is empty.
+
+        :param cumulative: If true, cumulative sum from daily results will
+        be returned otherwise daily result count will be returned.
+        :return: A list of dict [{'Date': '2020-05-20', 'Count': 24}, {..} ..]
+        """
+        ret = []
+        running_sum = 0
+
+        u_date = self.unique_date()
+
+        for i, ud in enumerate(u_date):
+            res, cnt = {}, 0
+            for doh in self.__data:
+                date_conf = doh['DateRepConf']
+                if ud == date_conf and doh['RegionRes'] == '':
+                    cnt += 1
+
+            running_sum += cnt
+            res.update({'Date': ud})
+            res.update({'Count': running_sum if cumulative else cnt})
+            ret.append(res)
+
+        ret = sorted(ret, key=lambda i: i['Date'], reverse=True)  # Descending
+
+        return ret
+
     def cases(self, region=None, province=None, city=None, municipality=None,
               days=None, cumulative=False, active=False):
         """
