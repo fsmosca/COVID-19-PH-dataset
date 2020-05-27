@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.16'
+version = 'covidphi v0.17'
 
 
 class DangerousCovid:    
@@ -254,8 +254,10 @@ class DangerousCovid:
     def validation(self, cumulative=False):
         """
         Returns a list of dict of confirmed cases that are still for
-        validation. This is an entry in DOH RegionRes column where
-        the value is empty.
+        validation. This is an entry in DOH ValidationStatus column where
+        the value is "For Validation".
+        ValidationStatus column is just added today 2020-05-26 in
+        case information csv file.
 
         :param cumulative: If true, cumulative sum from daily results will
         be returned otherwise daily result count will be returned.
@@ -270,7 +272,7 @@ class DangerousCovid:
             res, cnt = {}, 0
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
-                if ud == date_conf and doh['RegionRes'] == '':
+                if ud == date_conf and doh['ValidationStatus'] == 'For Validation':
                     cnt += 1
 
             running_sum += cnt
