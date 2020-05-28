@@ -32,7 +32,7 @@ import csv
 from datetime import datetime
 
 
-version = 'covidphi v0.17'
+version = 'covidphi v0.18'
 
 
 class DangerousCovid:    
@@ -272,8 +272,13 @@ class DangerousCovid:
             res, cnt = {}, 0
             for doh in self.__data:
                 date_conf = doh['DateRepConf']
-                if ud == date_conf and doh['ValidationStatus'] == 'For Validation':
-                    cnt += 1
+
+                try:
+                    if ud == date_conf and doh['ValidationStatus'] == 'For Validation':
+                        cnt += 1
+                # DOH removed the ValidationStatus column in case info csv file.
+                except KeyError:
+                    print('Warning the case info database has no ValidationStatus column!')
 
             running_sum += cnt
             res.update({'Date': ud})
